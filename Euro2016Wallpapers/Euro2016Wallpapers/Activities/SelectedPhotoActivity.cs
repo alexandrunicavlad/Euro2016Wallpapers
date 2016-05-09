@@ -76,6 +76,7 @@ namespace Euro2016Wallpapers
 		private static readonly string DatabaseDirectory =	System.IO.Path.Combine (System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal), "../databases");
 		public const string DatabaseFileName = "WOHdb";
 		public long free;
+		public int a = 1;
 
 		protected override void OnCreate (Bundle bundle)
 		{
