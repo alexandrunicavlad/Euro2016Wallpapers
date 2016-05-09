@@ -54,8 +54,7 @@ namespace Euro2016Wallpapers
 		private bool playersBool = false;
 		private bool countryBool = false;
 		private bool legendsBool = false;
-		//		private bool coupleBool = false;
-		//		private bool motivationBool = false;
+
 		private bool retrying = false;
 		private bool loadingData = false;
 
@@ -67,8 +66,6 @@ namespace Euro2016Wallpapers
 		private LinearLayout playerslayout;
 		private LinearLayout countrylayout;
 		private LinearLayout legendslayout;
-		//		private LinearLayout couplelayout;
-		//		private LinearLayout motivationlayout;
 
 		private RelativeLayout loading;
 		private RelativeLayout homePage;
@@ -86,7 +83,7 @@ namespace Euro2016Wallpapers
 			SetContentView (Resource.Layout.select_photo_drawer);
 			ConstructActionBar ();
 			UpdateTexts ();
-			SetTitle (GetString (Resource.String.Defaultbackground));
+			SetTitle (GetString (Resource.String.wallpapers));
 			//DatabaseServices = new DataBaseServices (this);
 			//CreateSqLiteDatabase ();
 			loading = FindViewById<RelativeLayout> (Resource.Id.main_loading);
@@ -94,12 +91,13 @@ namespace Euro2016Wallpapers
 			homePage = FindViewById<RelativeLayout> (Resource.Id.homepage);
 			homePage.Visibility = ViewStates.Visible;
 			bitmaps = new List<Bitmap> ();
-			ThreadPool.QueueUserWorkItem (o => GetData ("best"));
+			ThreadPool.QueueUserWorkItem (o => GetData ("newest"));
 			recyclerView = FindViewById<RecyclerView> (Resource.Id.image_recycler);
 			GridLayoutManager glm = new GridLayoutManager (this, 3);
 			recyclerView.SetLayoutManager (glm);
 			mainSlider = FindViewById<LinearLayout> (Resource.Id.main_slider);
 
+			newest = mainSlider.FindViewById<TextView> (Resource.Id.newestItem);
 			category = mainSlider.FindViewById<TextView> (Resource.Id.categoryItem);
 			random = mainSlider.FindViewById<TextView> (Resource.Id.randomItem);
 			newest.Background = Resources.GetDrawable (Resource.Drawable.button_round_green);
@@ -107,8 +105,6 @@ namespace Euro2016Wallpapers
 			playerslayout = mainSlider.FindViewById<LinearLayout> (Resource.Id.playerslayout);
 			countrylayout = mainSlider.FindViewById<LinearLayout> (Resource.Id.countrylayout);
 			legendslayout = mainSlider.FindViewById<LinearLayout> (Resource.Id.legendslayout);
-//			couplelayout = mainSlider.FindViewById<LinearLayout> (Resource.Id.Couplelayout);
-//			motivationlayout = mainSlider.FindViewById<LinearLayout> (Resource.Id.Motivationlayout);
 			var maxMemory = (int)(Java.Lang.Runtime.GetRuntime ().MaxMemory () / 1024);
 			var cacheSize = maxMemory / 2;
 			_memoryCache = new MemoryLimitedLruCache (cacheSize);
@@ -123,7 +119,7 @@ namespace Euro2016Wallpapers
 				} else {				
 					recyclerView.Visibility = ViewStates.Gone;
 					loadingRec.Visibility = ViewStates.Visible;
-					ThreadPool.QueueUserWorkItem (o => GetData ("best"));
+					ThreadPool.QueueUserWorkItem (o => GetData ("newest"));
 					RunOnUiThread (() => {
 						ClickValidator ().SetBackgroundResource (Color.Transparent);
 						newest.Background = Resources.GetDrawable (Resource.Drawable.button_round_green);
@@ -141,7 +137,7 @@ namespace Euro2016Wallpapers
 				} else {			
 					recyclerView.Visibility = ViewStates.Gone;
 					loadingRec.Visibility = ViewStates.Visible;
-					ThreadPool.QueueUserWorkItem (o => GetData ("categories/love"));
+					ThreadPool.QueueUserWorkItem (o => GetData ("categories/players"));
 					RunOnUiThread (() => {
 						ClickValidator ().SetBackgroundResource (Color.Transparent);
 						ClickCategoryValidator ();
@@ -181,7 +177,7 @@ namespace Euro2016Wallpapers
 				playerslayout.Clickable = false;
 				recyclerView.Visibility = ViewStates.Gone;
 				loadingRec.Visibility = ViewStates.Visible;
-				ThreadPool.QueueUserWorkItem (o => GetData ("categories/love"));
+				ThreadPool.QueueUserWorkItem (o => GetData ("categories/players"));
 				RunOnUiThread (() => {
 					mainSlider.FindViewById<TextView> (Resource.Id.playersText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
 					mainSlider.FindViewById<ImageView> (Resource.Id.playersImage).SetImageResource (Resource.Drawable.ic_love_green);
@@ -197,7 +193,7 @@ namespace Euro2016Wallpapers
 				countrylayout.Clickable = false;
 				recyclerView.Visibility = ViewStates.Gone;
 				loadingRec.Visibility = ViewStates.Visible;
-				ThreadPool.QueueUserWorkItem (o => GetData ("categories/happiness"));
+				ThreadPool.QueueUserWorkItem (o => GetData ("categories/country"));
 				RunOnUiThread (() => {
 					mainSlider.FindViewById<TextView> (Resource.Id.countryText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
 					mainSlider.FindViewById<ImageView> (Resource.Id.countryImage).SetImageResource (Resource.Drawable.ic_happiness_green);
@@ -214,7 +210,7 @@ namespace Euro2016Wallpapers
 				legendslayout.Clickable = false;
 				recyclerView.Visibility = ViewStates.Gone;
 				loadingRec.Visibility = ViewStates.Visible;
-				ThreadPool.QueueUserWorkItem (o => GetData ("categories/sport"));
+				ThreadPool.QueueUserWorkItem (o => GetData ("categories/legends"));
 				RunOnUiThread (() => {
 					mainSlider.FindViewById<TextView> (Resource.Id.legendsText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
 					mainSlider.FindViewById<ImageView> (Resource.Id.legendsImage).SetImageResource (Resource.Drawable.ic_sport_green);
@@ -222,93 +218,60 @@ namespace Euro2016Wallpapers
 					legendsBool = true;
 				});
 			};
-//			couplelayout.Click += delegate {
-//				if (loadingData) {
-//					return;
-//				}
-//				loadingData = true;
-//				couplelayout.Clickable = false;
-//				recyclerView.Visibility = ViewStates.Gone;
-//				loadingRec.Visibility = ViewStates.Visible;
-//				ThreadPool.QueueUserWorkItem (o => GetData ("categories/couple"));
-//				RunOnUiThread (() => {				
-//
-//					mainSlider.FindViewById<TextView> (Resource.Id.CoupleText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
-//					mainSlider.FindViewById<ImageView> (Resource.Id.CoupleImage).SetImageResource (Resource.Drawable.ic_couple_green);
-//					ClickCategoryValidator ();
-//					coupleBool = true;
-//				});
-//			};
-//			motivationlayout.Click += delegate {
-//				if (loadingData) {
-//					return;
-//				}
-//				loadingData = true;
-//				motivationlayout.Clickable = false;
-//				recyclerView.Visibility = ViewStates.Gone;
-//				loadingRec.Visibility = ViewStates.Visible;
-//				ThreadPool.QueueUserWorkItem (o => GetData ("categories/motivation"));
-//				RunOnUiThread (() => {	
-//					mainSlider.FindViewById<TextView> (Resource.Id.MotivationText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
-//					mainSlider.FindViewById<ImageView> (Resource.Id.MotivationImage).SetImageResource (Resource.Drawable.ic_motivation_green);
-//					ClickCategoryValidator ();
-//					motivationBool = true;
-//				});
-//			};
 
 		}
 
 		private Dictionary<string, List<ImageModel>>  ConstructImageFromApp ()
 		{	
 			var listOfImages = new Dictionary<string, List<ImageModel>> ();
-			var bestList = new List<ImageModel> ();
-			var loveList = new List<ImageModel> ();
-			var happinessList = new List<ImageModel> ();
-			var sportList = new List<ImageModel> ();
-			var coupleList = new List<ImageModel> ();
-			var motivationList = new List<ImageModel> ();
-			bestList.Add (new ImageModel () {
+			var newestList = new List<ImageModel> ();
+			var playersList = new List<ImageModel> ();
+			var countryList = new List<ImageModel> ();
+			var legendsList = new List<ImageModel> ();
+//			var coupleList = new List<ImageModel> ();
+//			var motivationList = new List<ImageModel> ();
+			newestList.Add (new ImageModel () {
 				version = Resource.Drawable.sport_213, type = "local"
 			});
-			bestList.Add (new ImageModel () {
+			newestList.Add (new ImageModel () {
 				version = Resource.Drawable.happiness_212, type = "local"
 			});
-			loveList.Add (new ImageModel () {
+			playersList.Add (new ImageModel () {
 				version = Resource.Drawable.love_212, type = "local"
 			});
-			loveList.Add (new ImageModel () {
+			playersList.Add (new ImageModel () {
 				version = Resource.Drawable.love_213, type = "local"
 			});
-			happinessList.Add (new ImageModel () {
+			countryList.Add (new ImageModel () {
 				version = Resource.Drawable.happiness_212, type = "local"
 			});
-			happinessList.Add (new ImageModel () {
+			countryList.Add (new ImageModel () {
 				version = Resource.Drawable.happiness_213, type = "local"
 			});
-			sportList.Add (new ImageModel () {
+			legendsList.Add (new ImageModel () {
 				version = Resource.Drawable.sport_212, type = "local"
 			});
-			sportList.Add (new ImageModel () {
+			legendsList.Add (new ImageModel () {
 				version = Resource.Drawable.sport_213, type = "local"
 			});
-			coupleList.Add (new ImageModel () {
-				version = Resource.Drawable.couple_212, type = "local"
-			});
-			coupleList.Add (new ImageModel () {
-				version = Resource.Drawable.couple_213, type = "local"
-			});
-			motivationList.Add (new ImageModel () {
-				version = Resource.Drawable.motivation_212, type = "local"
-			});
-			motivationList.Add (new ImageModel () {
-				version = Resource.Drawable.motivation_213, type = "local"
-			});
-			listOfImages.Add ("best", bestList);
-			listOfImages.Add ("categories/love", loveList);
-			listOfImages.Add ("categories/happiness", happinessList);			
-			listOfImages.Add ("categories/sport", sportList);
-			listOfImages.Add ("categories/couple", coupleList);
-			listOfImages.Add ("categories/motivation", motivationList);
+//			coupleList.Add (new ImageModel () {
+//				version = Resource.Drawable.couple_212, type = "local"
+//			});
+//			coupleList.Add (new ImageModel () {
+//				version = Resource.Drawable.couple_213, type = "local"
+//			});
+//			motivationList.Add (new ImageModel () {
+//				version = Resource.Drawable.motivation_212, type = "local"
+//			});
+//			motivationList.Add (new ImageModel () {
+//				version = Resource.Drawable.motivation_213, type = "local"
+//			});
+			listOfImages.Add ("newest", newestList);
+			listOfImages.Add ("categories/players", playersList);
+			listOfImages.Add ("categories/country", countryList);			
+			listOfImages.Add ("categories/legends", legendsList);
+//			listOfImages.Add ("categories/couple", coupleList);
+//			listOfImages.Add ("categories/motivation", motivationList);
 
 			return listOfImages;
 		}
@@ -380,36 +343,36 @@ namespace Euro2016Wallpapers
 			images = new List<ImageModel> ();
 
 			switch (type) {
-			case "best":
+			case "newest":
 				{	
 					images = ConstructImageFromApp () [type];
 					break;
 				}
-			case "categories/love":
+			case "categories/players":
 				{
 					images = ConstructImageFromApp () [type];
 					break;
 				}
-			case "categories/happiness":
+			case "categories/country":
 				{
 					images = ConstructImageFromApp () [type];
 					break;
 				}
-			case "categories/sport":
+			case "categories/legends":
 				{
 					images = ConstructImageFromApp () [type];
 					break;
 				}
-			case "categories/couple":
-				{
-					images = ConstructImageFromApp () [type];
-					break;
-				}
-			case "categories/motivation":
-				{
-					images = ConstructImageFromApp () [type];
-					break;
-				}
+//			case "categories/couple":
+//				{
+//					images = ConstructImageFromApp () [type];
+//					break;
+//				}
+//			case "categories/motivation":
+//				{
+//					images = ConstructImageFromApp () [type];
+//					break;
+//				}
 			}
 
 			var reqUrl = string.Format ("{0}{1}/&max_results=500", requestURL, type);
