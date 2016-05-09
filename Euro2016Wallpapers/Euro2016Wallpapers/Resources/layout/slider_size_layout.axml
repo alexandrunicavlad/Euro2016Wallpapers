@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:visibility="invisible"
+            android:textColor="@color/black"
+            android:id="@+id/text_seekBar_indicator" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_sliderChild_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="A"
+            android:id="@+id/edit_slider_end_text"
+            android:layout_marginRight="20dp"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_main" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:id="@+id/edit_slider_start_text"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_main" />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_seekBar"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:maxHeight="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/edit_slider_start_text"
+            android:layout_toLeftOf="@+id/edit_slider_end_text"
+            android:layout_centerVertical="true"
+            android:max="72" />
+    </RelativeLayout>
+</LinearLayout>

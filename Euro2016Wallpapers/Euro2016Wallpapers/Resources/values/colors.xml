@@ -1,0 +1,39 @@
+<resources>
+	<color name="white">#FFFFFF</color>
+	<color name="gray_menu">#444444</color>
+	<color name="yellow">#FFFF00</color>
+	<color name="fuchsia">#FF00FF</color>
+	<color name="red">#FF0000</color>
+	<color name="silver">#C0C0C0</color>
+	<color name="gray">#808080</color>
+	<color name="olive">#808000</color>
+	<color name="purple">#800080</color>
+	<color name="maroon">#800000</color>
+	<color name="aqua">#00FFFF</color>
+	<color name="lime">#00FF00</color>
+	<color name="transparent">#00000000</color>
+	<color name="teal">#008080</color>
+	<color name="green">#008000</color>
+	<color name="blue">#0000FF</color>
+	<color name="navy">#000080</color>
+	<color name="black">#000000</color>
+	<color name="background">#f4f4f4</color>
+	<color name="green_main">#57ba52</color>
+	<color name="black_transparent">#66000000</color>
+	<color name="gray_text">#DBDBDB</color>
+	<color name="green_dark">#499647</color>
+	<color name="blackBottomBar">#202020</color>
+	<!--text color -->
+	<color name="blue_text_euro">#0b72b5</color>
+	<color name="blue_text_euro_dark">#00518e</color>
+	<color name="purple_text">#5856D6</color>
+	<color name="blue_text">#037AFF</color>
+	<color name="blue_light_text">#33AADC</color>
+	<color name="green_text">#4AD964</color>
+	<color name="pink_text">#FF2D55</color>
+	<color name="red_text">#FF3B30</color>
+	<color name="orange_text">#FF9502</color>
+	<color name="yellow_text">#FFCC03</color>
+	<color name="black_text">#000000</color>
+	<color name="white_text">#FFFFFF</color>
+</resources>

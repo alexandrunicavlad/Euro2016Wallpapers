@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/picturelayout"
+        android:layout_height="match_parent">
+        <MoveText.MoveImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/picturefromcamera"
+            android:layout_above="@+id/bottomMenu" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/settingsIcon"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_settings"
+                android:background="@drawable/round_green_main" />
+            <ImageView xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/palletteIcon"
+                android:src="@drawable/ic_paint_palette_filled"
+                android:visibility="gone"
+                android:background="@drawable/round_green_main"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="17dp" />
+            <ImageView xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/textIcon"
+                android:src="@drawable/ic_type_filled"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="17dp"
+                android:visibility="gone"
+                android:background="@drawable/round_green_main"
+                android:layout_alignParentRight="true" />
+            <ImageView xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/fontIcon"
+                android:src="@drawable/ic_generic_text_filled"
+                android:layout_marginTop="23dp"
+                android:visibility="gone"
+                android:layout_marginRight="17dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/round_green_main"
+                android:fitsSystemWindows="false" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blackBottomBar"
+            android:id="@+id/bottomMenu">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cancelIcon"
+                android:src="@drawable/ic_cancel"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/saveIcon"
+                android:src="@drawable/ic_check"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/editIcon"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_pencil_tip"
+            android:background="@drawable/round_green_main" />
+    </RelativeLayout>
+    <include
+        android:id="@+id/main_loading"
+        android:visibility="gone"
+        layout="@layout/loading_layout" />
+</RelativeLayout>

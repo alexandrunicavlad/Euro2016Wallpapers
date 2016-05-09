@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{CE263980-FC71-4072-B965-5E1C6BD6B5B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Euro2016Wallpapers</RootNamespace>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>Euro2016Wallpapers</AssemblyName>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <XamarinInsightsApiKey>9164873c5dede5020448f23554dee6b8354a4122</XamarinInsightsApiKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkIO">
+      <HintPath>..\packages\Square.OkIO.1.5.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.4.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.Picasso">
+      <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.2\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.3.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Activities\DownloadActivity.cs" />
+    <Compile Include="Activities\LanguageActivity.cs" />
+    <Compile Include="Activities\PictureActivity.cs" />
+    <Compile Include="Activities\SelectedPhotoActivity.cs" />
+    <Compile Include="Helpers\ImageAdapter.cs" />
+    <Compile Include="Helpers\LruCache.cs" />
+    <Compile Include="Helpers\TextListAdapter.cs" />
+    <Compile Include="Helpers\TypeFaceListAdapter.cs" />
+    <Compile Include="Models\ImageModel.cs" />
+    <Compile Include="Models\TextModel.cs" />
+    <Compile Include="Models\TypefaceModel.cs" />
+    <Compile Include="MoveText\HighlightViewText.cs" />
+    <Compile Include="MoveText\MoveImageView.cs" />
+    <Compile Include="Services\DataBaseServices.cs" />
+    <Compile Include="Services\IDataBaseServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+    <None Include="packages\CloudinaryDotNet.1.0.23\lib\net35\CloudinaryDotNet.dll" />
+    <None Include="packages\CloudinaryDotNet.1.0.23\lib\net40\CloudinaryDotNet.dll" />
+    <None Include="packages\CloudinaryDotNet.1.0.23\CloudinaryDotNet.1.0.23.nupkg" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net20\Newtonsoft.Json.dll" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net20\Newtonsoft.Json.xml" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net35\Newtonsoft.Json.dll" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net35\Newtonsoft.Json.xml" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.xml" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.xml" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.xml" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\tools\install.ps1" />
+    <None Include="packages\Newtonsoft.Json.8.0.3\Newtonsoft.Json.8.0.3.nupkg" />
+    <None Include="packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.2.1\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll" />
+    <None Include="packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.2.1\Xamarin.Android.Support.Animated.Vector.Drawable.23.2.1.nupkg" />
+    <None Include="packages\Xamarin.Android.Support.Design.23.2.1\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll" />
+    <None Include="packages\Xamarin.Android.Support.Design.23.2.1\Xamarin.Android.Support.Design.23.2.1.nupkg" />
+    <None Include="packages\Xamarin.Android.Support.v4.23.2.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll" />
+    <None Include="packages\Xamarin.Android.Support.v4.23.2.1\Xamarin.Android.Support.v4.23.2.1.nupkg" />
+    <None Include="packages\Xamarin.Android.Support.v7.AppCompat.23.2.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll" />
+    <None Include="packages\Xamarin.Android.Support.v7.AppCompat.23.2.1\Xamarin.Android.Support.v7.AppCompat.23.2.1.nupkg" />
+    <None Include="packages\Xamarin.Android.Support.v7.CardView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll" />
+    <None Include="packages\Xamarin.Android.Support.v7.CardView.23.3.0\Xamarin.Android.Support.v7.CardView.23.3.0.nupkg" />
+    <None Include="packages\Xamarin.Android.Support.v7.RecyclerView.23.2.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll" />
+    <None Include="packages\Xamarin.Android.Support.v7.RecyclerView.23.2.1\Xamarin.Android.Support.v7.RecyclerView.23.2.1.nupkg" />
+    <None Include="packages\Xamarin.Android.Support.Vector.Drawable.23.2.1\build\Xamarin.Android.Support.Tasks.VectorDrawable.dll" />
+    <None Include="packages\Xamarin.Android.Support.Vector.Drawable.23.2.1\build\Xamarin.Android.Support.Vector.Drawable.targets" />
+    <None Include="packages\Xamarin.Android.Support.Vector.Drawable.23.2.1\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll" />
+    <None Include="packages\Xamarin.Android.Support.Vector.Drawable.23.2.1\Xamarin.Android.Support.Vector.Drawable.23.2.1.nupkg" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\MonoTouch10\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\MonoTouch10\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\portable-win+net40\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\portable-win+net40\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\windows8\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\windows8\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\WP80\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\WP80\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\wpa\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\wpa\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\Xamarin.iOS10\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\Xamarin.iOS10\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\Xamarin.Mac20\Xamarin.Insights.Build.Task.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\build\Xamarin.Mac20\Xamarin.Insights.targets" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\MonoAndroid10\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\MonoAndroid10\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\MonoTouch10\PLCrashReporter.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\MonoTouch10\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\MonoTouch10\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\net40\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\net40\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\windows8\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\windows8\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\WP80\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\WP80\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\wpa\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\wpa\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\Xamarin.iOS10\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\Xamarin.iOS10\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\Xamarin.Mac20\Xamarin.Insights.dll" />
+    <None Include="packages\Xamarin.Insights.1.11.2\lib\Xamarin.Mac20\Xamarin.Insights.XML" />
+    <None Include="packages\Xamarin.Insights.1.11.2\Xamarin.Insights.1.11.2.nupkg" />
+    <None Include="packages\repositories.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_back.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_cancel.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_chose_photos.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_couple.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_couple_green.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_de.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_edit_pencil.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_external_photo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_format_bold.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_format_text.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_gb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_generic_text_filled.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_happiness.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_happiness_green.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_language.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_love.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_love_green.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_motivation.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_motivation_green.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_paint_palette_filled.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_palette.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_pencil_tip.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_ro.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_ru.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_save.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_sport.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_sport_green.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_take_camera.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_type_filled.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_check.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_back.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_cancel.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_chose_photos.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_couple.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_couple_green.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_de.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_edit_pencil.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_external_photo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_format_bold.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_format_text.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_gb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_generic_text_filled.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_happiness.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_happiness_green.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_language.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_love.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_love_green.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_motivation.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_motivation_green.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_paint_palette_filled.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_palette.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_pencil_tip.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_ro.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_ru.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_save.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_sport.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_sport_green.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_take_camera.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_type_filled.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_back.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_cancel.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_chose_photos.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_couple.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_couple_green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_de.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_edit_pencil.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_external_photo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_format_bold.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_format_text.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_gb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_generic_text_filled.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_happiness.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_happiness_green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_language.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_love.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_love_green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_motivation.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_motivation_green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_paint_palette_filled.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_palette.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_pencil_tip.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_ro.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_ru.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_sport.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_sport_green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_take_camera.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_type_filled.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_back.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_cancel.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_check.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_chose_photos.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_couple.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_couple_green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_de.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_edit_pencil.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_external_photo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_format_bold.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_format_text.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_gb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_generic_text_filled.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_happiness.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_happiness_green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_language.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_love.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_love_green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_motivation.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_motivation_green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_paint_palette_filled.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_palette.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_pencil_tip.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_ro.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_ru.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_save.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_sport.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_sport_green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_take_camera.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_type_filled.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_back.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_cancel.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_check.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chose_photos.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_couple.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_couple_green.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_de.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_edit_pencil.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_external_photo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_folder.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_format_bold.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_format_text.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_gb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_generic_text_filled.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_happiness.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_happiness_green.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_language.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_love.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_love_green.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_motivation.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_motivation_green.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_paint_palette_filled.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_palette.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_pencil_tip.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_ro.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_ru.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_save.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_sport.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_sport_green.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_take_camera.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_type_filled.png" />
+    <AndroidResource Include="Resources\drawable\bar_round_gray.xml" />
+    <AndroidResource Include="Resources\drawable\button_round_green.xml" />
+    <AndroidResource Include="Resources\drawable\couple_212.jpg" />
+    <AndroidResource Include="Resources\drawable\couple_213.jpg" />
+    <AndroidResource Include="Resources\drawable\happiness_212.jpg" />
+    <AndroidResource Include="Resources\drawable\happiness_213.jpg" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\love_212.jpg" />
+    <AndroidResource Include="Resources\drawable\love_213.jpg" />
+    <AndroidResource Include="Resources\drawable\motivation_212.jpg" />
+    <AndroidResource Include="Resources\drawable\motivation_213.jpg" />
+    <AndroidResource Include="Resources\drawable\round_black.xml" />
+    <AndroidResource Include="Resources\drawable\round_blue.xml" />
+    <AndroidResource Include="Resources\drawable\round_blue_light.xml" />
+    <AndroidResource Include="Resources\drawable\round_green.xml" />
+    <AndroidResource Include="Resources\drawable\round_green_main.xml" />
+    <AndroidResource Include="Resources\drawable\round_orange.xml" />
+    <AndroidResource Include="Resources\drawable\round_pink.xml" />
+    <AndroidResource Include="Resources\drawable\round_purple.xml" />
+    <AndroidResource Include="Resources\drawable\round_red.xml" />
+    <AndroidResource Include="Resources\drawable\round_whit.xml" />
+    <AndroidResource Include="Resources\drawable\round_yellow.xml" />
+    <AndroidResource Include="Resources\drawable\seekbar_progress.xml" />
+    <AndroidResource Include="Resources\drawable\sport_212.jpg" />
+    <AndroidResource Include="Resources\drawable\sport_213.jpg" />
+    <AndroidResource Include="Resources\layout\color_text_layout.axml" />
+    <AndroidResource Include="Resources\layout\download_layout.axml" />
+    <AndroidResource Include="Resources\layout\header.axml" />
+    <AndroidResource Include="Resources\layout\language_layout.axml" />
+    <AndroidResource Include="Resources\layout\left_menu.axml" />
+    <AndroidResource Include="Resources\layout\loading_layout.axml" />
+    <AndroidResource Include="Resources\layout\main_slider_layout.axml" />
+    <AndroidResource Include="Resources\layout\picture_layout.axml" />
+    <AndroidResource Include="Resources\layout\picture_layout_main.xml" />
+    <AndroidResource Include="Resources\layout\select_photo_drawer.xml" />
+    <AndroidResource Include="Resources\layout\slider_size_layout.axml" />
+    <AndroidResource Include="Resources\layout\textItems_listview.axml" />
+    <AndroidResource Include="Resources\layout\textItems_row.axml" />
+    <AndroidResource Include="Resources\layout\textTypeface_row.xml" />
+    <AndroidResource Include="Resources\layout\tool_bar.axml" />
+    <AndroidResource Include="Resources\menu\navmenu.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\layout\main.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.2\build\MonoAndroid10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+</Project>

@@ -1,0 +1,46 @@
+<resources>
+	<string name="app_name">Euro 2016 Wallpapers </string>
+	<string name="open_drawer">Open drawer</string>
+	<string name="close_drawer">Close drawer</string>
+	<string name="wallpapers">WALLPAPERS</string>
+	<string name="tutorial">TUTORIAL</string>
+	<string name="morewallpapers">MORE WALLPAPERS</string>
+	<!--language-->
+	<string name="English">English</string>
+	<string name="German">German</string>
+	<string name="Romanian">Romanian</string>
+	<string name="Russian">Russian</string>
+	<!--toolbar title-->
+	<string name="Selectlanguage">Select your language</string>
+	<string name="Previewbackground">Preview background</string>
+	<string name="Defaultbackground">Default background</string>
+	<!--category-->
+	<string name="Players">Players</string>
+	<string name="Country">Country</string>
+	<string name="Legends">Legends</string>
+	<!--tab-->
+	<string name="NEWEST">NEWEST</string>
+	<string name="CATEGORY">CATEGORY</string>
+	<string name="RANDOM">RANDOM</string>
+	<!--error-->
+	<string name="ValidationErrorConverting">Unable to retreive any data!</string>
+	<string name="TryAgainLater">Error completing current action. Please try again later</string>
+	<string name="TryAgain">Please try again</string>
+	<string name="ValidationRequestTimeOut">Problem connecting to the internet. Please try again</string>
+	<string name="ValidationCannotCast">Sorry,there was a problem connecting. Please try again</string>
+	<string name="ValidationIntPtr">Your picture was not loaded correctly</string>
+	<string name="ValidationText">Your text was not loaded correctly</string>
+	<string name="Pleasechecksd">Please check sd card</string>
+	<string name="Failedtoload">Failed to load capture</string>
+	<!--alert-->
+	<string name="Okbutton">OK</string>
+	<string name="donebutton">Done</string>
+	<string name="cancelbutton">Cancel</string>
+	<string name="ComingSoon">Coming Soon!</string>
+	<string name="ChoseColor">Choose color</string>
+	<string name="ChoseText">Choose Text</string>
+	<string name="Selectfontsize">Select font size</string>
+	<string name="Selectfonttype">Select font type</string>
+	<string name="saveWallpapers">Your wallpapers was saved to your album</string>
+	<string name="saveWallpapersMess">How to set as wallpaper?</string>
+</resources>

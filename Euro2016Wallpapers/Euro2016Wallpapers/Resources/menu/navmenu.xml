@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<group android:checkableBehavior="single" android:id="@+id/left_menu">
+		<item android:id="@+id/nav_take_photo" android:icon="@drawable/ic_palette" android:title="TAKE PHOTO" android:checked="false" />
+		<item android:id="@+id/nav_chose" android:icon="@drawable/ic_palette" android:title="CHOSE FROM PHOTOS" android:checked="false" />
+		<item android:id="@+id/nav_external" android:icon="@drawable/ic_palette" android:title="EXTERNAL PHOTOS" android:checked="false" />
+		<item android:id="@+id/nav_language" android:icon="@drawable/ic_palette" android:title="LANGUAGE" android:checked="false" />
+	</group>
+</menu>

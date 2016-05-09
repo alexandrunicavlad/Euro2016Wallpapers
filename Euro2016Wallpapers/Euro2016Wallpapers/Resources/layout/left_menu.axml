@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:id="@+id/chooseLayout"
+    android:background="@color/white"
+    android:paddingTop="20dp">
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/wallpapersLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_chose_photos" />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:id="@+id/wallpapersText"
+                    android:textColor="@color/blue_text_euro"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/wallpapers" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:id="@+id/tutorialLayout"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_external_photo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:id="@+id/tutorialText"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/tutorial"
+                    android:textColor="@color/blue_text_euro" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/morewallpapersLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_language" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:id="@+id/morewallpapersText"
+                    android:textColor="@color/blue_text_euro"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/morewallpapers" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
