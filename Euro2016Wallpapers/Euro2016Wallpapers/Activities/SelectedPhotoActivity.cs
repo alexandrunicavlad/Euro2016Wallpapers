@@ -76,7 +76,6 @@ namespace Euro2016Wallpapers
 		private static readonly string DatabaseDirectory =	System.IO.Path.Combine (System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal), "../databases");
 		public const string DatabaseFileName = "WOHdb";
 		public long free;
-		public int a = 1;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -145,7 +144,7 @@ namespace Euro2016Wallpapers
 						mainSlider.FindViewById<LinearLayout> (Resource.Id.category_slider).Visibility = ViewStates.Visible;
 						category.Background = Resources.GetDrawable (Resource.Drawable.button_round_green);
 						mainSlider.FindViewById<TextView> (Resource.Id.playersText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
-						mainSlider.FindViewById<ImageView> (Resource.Id.playersImage).SetImageResource (Resource.Drawable.ic_love_green);
+						mainSlider.FindViewById<ImageView> (Resource.Id.playersImage).SetImageResource (Resource.Drawable.ic_players_blue);
 						categoryBool = true;
 						playersBool = true;
 					});
@@ -181,7 +180,7 @@ namespace Euro2016Wallpapers
 				ThreadPool.QueueUserWorkItem (o => GetData ("categories/players"));
 				RunOnUiThread (() => {
 					mainSlider.FindViewById<TextView> (Resource.Id.playersText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
-					mainSlider.FindViewById<ImageView> (Resource.Id.playersImage).SetImageResource (Resource.Drawable.ic_love_green);
+					mainSlider.FindViewById<ImageView> (Resource.Id.playersImage).SetImageResource (Resource.Drawable.ic_players_blue);
 					ClickCategoryValidator ();
 					playersBool = true;
 				});
@@ -197,7 +196,7 @@ namespace Euro2016Wallpapers
 				ThreadPool.QueueUserWorkItem (o => GetData ("categories/country"));
 				RunOnUiThread (() => {
 					mainSlider.FindViewById<TextView> (Resource.Id.countryText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
-					mainSlider.FindViewById<ImageView> (Resource.Id.countryImage).SetImageResource (Resource.Drawable.ic_happiness_green);
+					mainSlider.FindViewById<ImageView> (Resource.Id.countryImage).SetImageResource (Resource.Drawable.ic_country_blue);
 					ClickCategoryValidator ();
 					countryBool = true;
 				});
@@ -214,7 +213,7 @@ namespace Euro2016Wallpapers
 				ThreadPool.QueueUserWorkItem (o => GetData ("categories/legends"));
 				RunOnUiThread (() => {
 					mainSlider.FindViewById<TextView> (Resource.Id.legendsText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
-					mainSlider.FindViewById<ImageView> (Resource.Id.legendsImage).SetImageResource (Resource.Drawable.ic_sport_green);
+					mainSlider.FindViewById<ImageView> (Resource.Id.legendsImage).SetImageResource (Resource.Drawable.ic_legends_blue);
 					ClickCategoryValidator ();
 					legendsBool = true;
 				});
@@ -282,28 +281,19 @@ namespace Euro2016Wallpapers
 			if (playersBool) {
 				playersBool = false;
 				mainSlider.FindViewById<TextView> (Resource.Id.playersText).SetTextColor (Resources.GetColor (Resource.Color.gray));
-				mainSlider.FindViewById<ImageView> (Resource.Id.playersImage).SetImageResource (Resource.Drawable.ic_love);
+				mainSlider.FindViewById<ImageView> (Resource.Id.playersImage).SetImageResource (Resource.Drawable.ic_players);
 				playerslayout.Clickable = true;
 			} else if (countryBool) {
 				countryBool = false;
 				mainSlider.FindViewById<TextView> (Resource.Id.countryText).SetTextColor (Resources.GetColor (Resource.Color.gray));
-				mainSlider.FindViewById<ImageView> (Resource.Id.countryImage).SetImageResource (Resource.Drawable.ic_happiness);
+				mainSlider.FindViewById<ImageView> (Resource.Id.countryImage).SetImageResource (Resource.Drawable.ic_country);
 				countrylayout.Clickable = true;
 			} else if (legendsBool) {
 				legendsBool = false;
 				mainSlider.FindViewById<TextView> (Resource.Id.legendsText).SetTextColor (Resources.GetColor (Resource.Color.gray));
-				mainSlider.FindViewById<ImageView> (Resource.Id.legendsImage).SetImageResource (Resource.Drawable.ic_sport);
+				mainSlider.FindViewById<ImageView> (Resource.Id.legendsImage).SetImageResource (Resource.Drawable.ic_legends);
 				legendslayout.Clickable = true;
-//			} else if (coupleBool) {
-//				coupleBool = false;
-//				mainSlider.FindViewById<TextView> (Resource.Id.CoupleText).SetTextColor (Resources.GetColor (Resource.Color.gray));
-//				mainSlider.FindViewById<ImageView> (Resource.Id.CoupleImage).SetImageResource (Resource.Drawable.ic_couple);
-//				couplelayout.Clickable = true;
-//			} else if (motivationBool) {
-//				motivationBool = false;
-//				mainSlider.FindViewById<TextView> (Resource.Id.MotivationText).SetTextColor (Resources.GetColor (Resource.Color.gray));
-//				mainSlider.FindViewById<ImageView> (Resource.Id.MotivationImage).SetImageResource (Resource.Drawable.ic_motivation);
-//				motivationlayout.Clickable = true;
+
 			}
 			//return item;
 		}
@@ -364,16 +354,7 @@ namespace Euro2016Wallpapers
 					images = ConstructImageFromApp () [type];
 					break;
 				}
-//			case "categories/couple":
-//				{
-//					images = ConstructImageFromApp () [type];
-//					break;
-//				}
-//			case "categories/motivation":
-//				{
-//					images = ConstructImageFromApp () [type];
-//					break;
-//				}
+
 			}
 
 			var reqUrl = string.Format ("{0}{1}/&max_results=500", requestURL, type);

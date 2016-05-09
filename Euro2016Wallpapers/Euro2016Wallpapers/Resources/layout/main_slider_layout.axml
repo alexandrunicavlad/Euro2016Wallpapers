@@ -64,7 +64,7 @@
                     android:layout_height="25dp"
                     android:id="@+id/playersImage"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_love" />
+                    android:src="@drawable/ic_players" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -85,7 +85,7 @@
                     android:layout_height="25dp"
                     android:id="@+id/countryImage"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_happiness" />
+                    android:src="@drawable/ic_country" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -106,7 +106,7 @@
                     android:layout_height="25dp"
                     android:id="@+id/legendsImage"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_sport"
+                    android:src="@drawable/ic_legends"
                     android:adjustViewBounds="false" />
                 <TextView
                     android:layout_width="match_parent"

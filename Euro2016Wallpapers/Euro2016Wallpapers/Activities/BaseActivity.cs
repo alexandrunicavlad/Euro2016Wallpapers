@@ -104,6 +104,15 @@ namespace Euro2016Wallpapers
 				//StartActivityForResult (typeof(LanguageActivity), 1);
 				drawerLayout.CloseDrawers ();
 			};
+
+			morewallpapers.Click += delegate {
+				drawerLayout.CloseDrawers ();
+				if (this is MoreWallpapersActivity) {
+
+				} else {
+					StartActivity (typeof(MoreWallpapersActivity));
+				}
+			};
 		}
 
 		protected void ShowRetry (RelativeLayout loading, Context context)
@@ -183,36 +192,36 @@ namespace Euro2016Wallpapers
 			return imageBitmap;
 		}
 
-		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
-		{
-			if ((requestCode == REQUEST_IMAGE_CAPTURE) && (resultCode == Result.Ok)) {	
-
-				ContentResolver.NotifyChange (selectedImage, null);
-				ContentResolver cr = ContentResolver;
-				try {
-					var intent = new Intent (this, typeof(PictureActivity));
-					intent.SetDataAndType (selectedImage, "image/*");
-					intent.PutExtra ("image-path", selectedImage.ToString ());
-					StartActivityForResult (intent, REQUEST_IMAGE_CAPTURE);
-				} catch (Exception e) {
-					Toast.MakeText (this, GetString (Resource.String.Failedtoload), ToastLength.Short).Show ();
-				}
-			} else if ((requestCode == REQUEST_IMAGE_ALBUM) && (resultCode == Result.Ok) && (data != null)) {
-				selectedImage = data.Data;
-				try {
-					var intent = new Intent (this, typeof(PictureActivity));
-					intent.SetDataAndType (selectedImage, "image/*");
-					intent.PutExtra ("image-path", selectedImage.ToString ());
-					StartActivityForResult (intent, REQUEST_IMAGE_ALBUM);
-					_bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, selectedImage);
-
-				} catch (Exception) {
-
-					var toast = Toast.MakeText (this, GetString (Resource.String.Failedtoload), ToastLength.Short);
-					toast.Show ();
-				}
-			}
-		}
+		//		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
+		//		{
+		//			if ((requestCode == REQUEST_IMAGE_CAPTURE) && (resultCode == Result.Ok)) {
+		//
+		//				ContentResolver.NotifyChange (selectedImage, null);
+		//				ContentResolver cr = ContentResolver;
+		//				try {
+		//					var intent = new Intent (this, typeof(PictureActivity));
+		//					intent.SetDataAndType (selectedImage, "image/*");
+		//					intent.PutExtra ("image-path", selectedImage.ToString ());
+		//					StartActivityForResult (intent, REQUEST_IMAGE_CAPTURE);
+		//				} catch (Exception e) {
+		//					Toast.MakeText (this, GetString (Resource.String.Failedtoload), ToastLength.Short).Show ();
+		//				}
+		//			} else if ((requestCode == REQUEST_IMAGE_ALBUM) && (resultCode == Result.Ok) && (data != null)) {
+		//				selectedImage = data.Data;
+		//				try {
+		//					var intent = new Intent (this, typeof(PictureActivity));
+		//					intent.SetDataAndType (selectedImage, "image/*");
+		//					intent.PutExtra ("image-path", selectedImage.ToString ());
+		//					StartActivityForResult (intent, REQUEST_IMAGE_ALBUM);
+		//					_bitmap = MediaStore.Images.Media.GetBitmap (this.ContentResolver, selectedImage);
+		//
+		//				} catch (Exception) {
+		//
+		//					var toast = Toast.MakeText (this, GetString (Resource.String.Failedtoload), ToastLength.Short);
+		//					toast.Show ();
+		//				}
+		//			}
+		//		}
 
 		protected void HandleErrors (Exception e)
 		{			
