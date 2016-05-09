@@ -14,23 +14,32 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/app_icon" />
-            <ImageView
-                android:layout_height="70dp"
-                android:src="@drawable/logo"
-                android:layout_width="200dp"
-                android:layout_marginLeft="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EURO 2016"
+                android:textSize="30sp"
+                android:textStyle="normal"
+                android:textColor="@color/blue_text_euro"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wallpapers"
+                android:textColor="@color/red_text"
+                android:textSize="20sp" />
         </LinearLayout>
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
             android:id="@+id/splash_progressBar"
-            android:layout_marginTop="100dp" />
+            android:layout_marginTop="80dp" />
     </LinearLayout>
 </RelativeLayout>

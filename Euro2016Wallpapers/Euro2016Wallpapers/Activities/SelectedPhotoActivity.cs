@@ -37,9 +37,9 @@ namespace Euro2016Wallpapers
 	{
 		private const int REQUEST_IMAGE_CAPTURE = 1;
 		private const int REQUEST_IMAGE_ALBUM = 2;
-		private string requestURL = "https://api.cloudinary.com/v1_1/wp-of-happiness/resources/image/upload/?prefix=";
-		private const string ApiKey = "966956932715847";
-		private const string ApiSecret = "grc0mV1_k8xuV8xLYZgPGMpbwDw";
+		private string requestURL = "https://api.cloudinary.com/v1_1/euro2016wallpapers/resources/image/upload/?prefix=";
+		private const string ApiKey = "618283467225454";
+		private const string ApiSecret = "0EwmaNtPjw3eKxQ-408e9qJ7MVw";
 	
 		private LinearLayout mainSlider;
 		private List<ImageModel> images;
