@@ -54,6 +54,35 @@ namespace Euro2016Wallpapers
 			var imageNumber = extras.GetString ("image-number");
 			var imageName = extras.GetString ("image-name");
 			var imagePath = extras.GetInt ("image-path");
+			ShowImage ();
+			saveButton.Click += delegate {
+				saveButton.Clickable = false;
+				var bitm = ((BitmapDrawable)imageView.Drawable).Bitmap;
+				//imageView.DrawingCacheEnabled = true;
+				//Bitmap newbitmapnew = imageView.DrawingCache;
+				loading.Visibility = ViewStates.Visible;
+				ThreadPool.QueueUserWorkItem (o => SaveImage (bitm));	
+			};
+
+		}
+
+		public void ShowRetry ()
+		{
+			imageView.Visibility = ViewStates.Gone;
+			loading.Visibility = ViewStates.Visible;
+			loading.FindViewById<Button> (Resource.Id.loading_retry).Visibility = ViewStates.Visible;
+			loading.FindViewById<ProgressBar> (Resource.Id.splash_progressBar).Visibility = ViewStates.Gone;
+			loading.FindViewById<Button> (Resource.Id.loading_retry).Click += delegate {
+				ShowImage ();
+			};
+
+		}
+
+		private void ShowImage ()
+		{
+			var imageNumber = extras.GetString ("image-number");
+			var imageName = extras.GetString ("image-name");
+			var imagePath = extras.GetInt ("image-path");
 			if (extras != null) {
 				if (imagePath == 0) {
 					if (imageNumber != null) {
@@ -78,15 +107,20 @@ namespace Euro2016Wallpapers
 					loading.Visibility = ViewStates.Gone;				
 				}
 			}
-			saveButton.Click += delegate {
-				saveButton.Clickable = false;
-				var bitm = ((BitmapDrawable)imageView.Drawable).Bitmap;
-				//imageView.DrawingCacheEnabled = true;
-				//Bitmap newbitmapnew = imageView.DrawingCache;
-				loading.Visibility = ViewStates.Visible;
-				ThreadPool.QueueUserWorkItem (o => SaveImage (bitm));	
-			};
+		}
 
+		public override void OnWindowFocusChanged (bool hasFocus)
+		{
+			int width = imageView.Width;
+			int height = imageView.Height;
+			base.OnWindowFocusChanged (hasFocus);
+		}
+
+
+		protected override void OnDestroy ()
+		{			
+			Picasso.With (this).CancelRequest (imageView);
+			base.OnDestroy ();
 		}
 
 		private void ConstructActionBar ()
@@ -97,8 +131,12 @@ namespace Euro2016Wallpapers
 			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 			SupportActionBar.SetDisplayShowHomeEnabled (true);
 			toolbar.NavigationClick += delegate {
-				OnBackPressed ();
-				Finish ();
+				if (saveButton.Clickable == false) {
+					return;
+				} else {			
+
+					Finish ();
+				}
 			};
 
 			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Drawable.ic_back);
