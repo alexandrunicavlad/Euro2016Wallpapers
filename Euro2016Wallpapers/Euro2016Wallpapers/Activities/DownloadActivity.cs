@@ -56,6 +56,8 @@ namespace Euro2016Wallpapers
 			var imagePath = extras.GetInt ("image-path");
 			ShowImage ();
 			saveButton.Click += delegate {
+				if (retry)
+					return;
 				saveButton.Clickable = false;
 				var bitm = ((BitmapDrawable)imageView.Drawable).Bitmap;
 				//imageView.DrawingCacheEnabled = true;
@@ -66,8 +68,18 @@ namespace Euro2016Wallpapers
 
 		}
 
+		public void HideRetry ()
+		{
+			retry = false;
+			imageView.Visibility = ViewStates.Visible;
+			loading.Visibility = ViewStates.Gone;
+			loading.FindViewById<Button> (Resource.Id.loading_retry).Visibility = ViewStates.Gone;
+			loading.FindViewById<ProgressBar> (Resource.Id.splash_progressBar).Visibility = ViewStates.Visible;
+		}
+
 		public void ShowRetry ()
 		{
+			retry = true;
 			imageView.Visibility = ViewStates.Gone;
 			loading.Visibility = ViewStates.Visible;
 			loading.FindViewById<Button> (Resource.Id.loading_retry).Visibility = ViewStates.Visible;
@@ -91,7 +103,12 @@ namespace Euro2016Wallpapers
 							Picasso.With (this).Load (url)
 								.MemoryPolicy (MemoryPolicy.NoCache)
 								.NetworkPolicy (NetworkPolicy.NoStore)
-								.Into (imageView);
+								.Into (imageView, delegate {							
+								var b =	System.GC.GetTotalMemory (true);
+								HideRetry ();
+							}, delegate {
+								ShowRetry ();
+							});				
 							imageView.Visibility = ViewStates.Visible;
 							loading.Visibility = ViewStates.Gone;
 						}
@@ -100,9 +117,16 @@ namespace Euro2016Wallpapers
 					imageView.SetScaleType (ImageView.ScaleType.FitXy);
 					Picasso.With (this)
 						.Load (imagePath)
+						.Fit ()
+						.CenterInside ()
+						.SkipMemoryCache ()		
 						.MemoryPolicy (MemoryPolicy.NoCache)
 						.NetworkPolicy (NetworkPolicy.NoStore)
-						.Into (imageView);
+						.Into (imageView, delegate {							
+						var b =	System.GC.GetTotalMemory (true);
+					}, delegate {
+						var a =	System.GC.GetTotalMemory (true);
+					});		
 					imageView.Visibility = ViewStates.Visible;
 					loading.Visibility = ViewStates.Gone;				
 				}

@@ -37,10 +37,12 @@ namespace Euro2016Wallpapers
 	{
 		private const int REQUEST_IMAGE_CAPTURE = 1;
 		private const int REQUEST_IMAGE_ALBUM = 2;
-		private string requestURL = "https://api.cloudinary.com/v1_1/euro2016wallpapers/resources/image/upload/?prefix=";
-		private const string ApiKey = "618283467225454";
-		private const string ApiSecret = "0EwmaNtPjw3eKxQ-408e9qJ7MVw";
-	
+		//		private string requestURL = "https://api.cloudinary.com/v1_1/euro2016wallpapers/resources/image/upload/?prefix=";
+		//		private const string ApiKey = "618283467225454";
+		//		private const string ApiSecret = "0EwmaNtPjw3eKxQ-408e9qJ7MVw";
+		private string requestURL = "https://api.cloudinary.com/v1_1/lacabana/resources/image/upload/?prefix=";
+		private const string ApiKey = "348639768631669";
+		private const string ApiSecret = "HHeKWX7znazzS61cd7tlTxBmV7I";
 		private LinearLayout mainSlider;
 		private List<ImageModel> images;
 		private List<ImageModel> images1;
@@ -91,7 +93,8 @@ namespace Euro2016Wallpapers
 			homePage = FindViewById<RelativeLayout> (Resource.Id.homepage);
 			homePage.Visibility = ViewStates.Visible;
 			bitmaps = new List<Bitmap> ();
-			ThreadPool.QueueUserWorkItem (o => GetData ("newest"));
+			//ThreadPool.QueueUserWorkItem (o => GetData ("newest"));
+			ThreadPool.QueueUserWorkItem (o => GetData ("Lora"));
 			recyclerView = FindViewById<RecyclerView> (Resource.Id.image_recycler);
 			GridLayoutManager glm = new GridLayoutManager (this, 3);
 			recyclerView.SetLayoutManager (glm);
@@ -119,7 +122,7 @@ namespace Euro2016Wallpapers
 				} else {				
 					recyclerView.Visibility = ViewStates.Gone;
 					loadingRec.Visibility = ViewStates.Visible;
-					ThreadPool.QueueUserWorkItem (o => GetData ("newest"));
+					ThreadPool.QueueUserWorkItem (o => GetData ("Lora"));
 					RunOnUiThread (() => {
 						ClickValidator ().SetBackgroundResource (Color.Transparent);
 						newest.Background = Resources.GetDrawable (Resource.Drawable.button_round_green);
