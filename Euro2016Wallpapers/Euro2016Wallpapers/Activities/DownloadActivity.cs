@@ -105,7 +105,6 @@ namespace Euro2016Wallpapers
 							Picasso.With (this).Load (url)
 								.MemoryPolicy (MemoryPolicy.NoCache)
 								.NetworkPolicy (NetworkPolicy.NoStore)
-								.Placeholder (Resource.Drawable.progress_animation)
 								.Into (imageView, delegate {							
 								var b =	System.GC.GetTotalMemory (true);								
 								HideRetry ();
