@@ -85,6 +85,8 @@ namespace Euro2016Wallpapers
 			loading.FindViewById<Button> (Resource.Id.loading_retry).Visibility = ViewStates.Visible;
 			loading.FindViewById<ProgressBar> (Resource.Id.splash_progressBar).Visibility = ViewStates.Gone;
 			loading.FindViewById<Button> (Resource.Id.loading_retry).Click += delegate {
+				loading.FindViewById<Button> (Resource.Id.loading_retry).Visibility = ViewStates.Gone;
+				loading.FindViewById<ProgressBar> (Resource.Id.splash_progressBar).Visibility = ViewStates.Visible;
 				ShowImage ();
 			};
 
@@ -103,14 +105,16 @@ namespace Euro2016Wallpapers
 							Picasso.With (this).Load (url)
 								.MemoryPolicy (MemoryPolicy.NoCache)
 								.NetworkPolicy (NetworkPolicy.NoStore)
+								.Placeholder (Resource.Drawable.progress_animation)
 								.Into (imageView, delegate {							
-								var b =	System.GC.GetTotalMemory (true);
+								var b =	System.GC.GetTotalMemory (true);								
 								HideRetry ();
+								imageView.Visibility = ViewStates.Visible;
+								loading.Visibility = ViewStates.Gone;								
 							}, delegate {
 								ShowRetry ();
-							});				
-							imageView.Visibility = ViewStates.Visible;
-							loading.Visibility = ViewStates.Gone;
+							});								
+							
 						}
 					}
 				} else {
@@ -123,12 +127,12 @@ namespace Euro2016Wallpapers
 						.MemoryPolicy (MemoryPolicy.NoCache)
 						.NetworkPolicy (NetworkPolicy.NoStore)
 						.Into (imageView, delegate {							
-						var b =	System.GC.GetTotalMemory (true);
+						var b =	System.GC.GetTotalMemory (true);						
 					}, delegate {
 						var a =	System.GC.GetTotalMemory (true);
 					});		
 					imageView.Visibility = ViewStates.Visible;
-					loading.Visibility = ViewStates.Gone;				
+					loading.Visibility = ViewStates.Gone;		
 				}
 			}
 		}

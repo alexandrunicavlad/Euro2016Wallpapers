@@ -40,9 +40,9 @@ namespace Euro2016Wallpapers
 		//		private string requestURL = "https://api.cloudinary.com/v1_1/euro2016wallpapers/resources/image/upload/?prefix=";
 		//		private const string ApiKey = "618283467225454";
 		//		private const string ApiSecret = "0EwmaNtPjw3eKxQ-408e9qJ7MVw";
-		private string requestURL = "https://api.cloudinary.com/v1_1/lacabana/resources/image/upload/?prefix=";
-		private const string ApiKey = "348639768631669";
-		private const string ApiSecret = "HHeKWX7znazzS61cd7tlTxBmV7I";
+		private string requestURL = "https://api.cloudinary.com/v1_1/euro2016wallpapers/resources/image/upload/?prefix=";
+		private const string ApiKey = "618283467225454";
+		private const string ApiSecret = "0EwmaNtPjw3eKxQ-408e9qJ7MVw";
 		private LinearLayout mainSlider;
 		private List<ImageModel> images;
 		private List<ImageModel> images1;
@@ -94,7 +94,7 @@ namespace Euro2016Wallpapers
 			homePage.Visibility = ViewStates.Visible;
 			bitmaps = new List<Bitmap> ();
 			//ThreadPool.QueueUserWorkItem (o => GetData ("newest"));
-			ThreadPool.QueueUserWorkItem (o => GetData ("Lora"));
+			ThreadPool.QueueUserWorkItem (o => GetData ("best"));
 			recyclerView = FindViewById<RecyclerView> (Resource.Id.image_recycler);
 			GridLayoutManager glm = new GridLayoutManager (this, 3);
 			recyclerView.SetLayoutManager (glm);
@@ -122,7 +122,7 @@ namespace Euro2016Wallpapers
 				} else {				
 					recyclerView.Visibility = ViewStates.Gone;
 					loadingRec.Visibility = ViewStates.Visible;
-					ThreadPool.QueueUserWorkItem (o => GetData ("Lora"));
+					ThreadPool.QueueUserWorkItem (o => GetData ("best"));
 					RunOnUiThread (() => {
 						ClickValidator ().SetBackgroundResource (Color.Transparent);
 						newest.Background = Resources.GetDrawable (Resource.Drawable.button_round_green);
@@ -196,7 +196,7 @@ namespace Euro2016Wallpapers
 				countrylayout.Clickable = false;
 				recyclerView.Visibility = ViewStates.Gone;
 				loadingRec.Visibility = ViewStates.Visible;
-				ThreadPool.QueueUserWorkItem (o => GetData ("categories/country"));
+				ThreadPool.QueueUserWorkItem (o => GetData ("categories/countries"));
 				RunOnUiThread (() => {
 					mainSlider.FindViewById<TextView> (Resource.Id.countryText).SetTextColor (Resources.GetColor (Resource.Color.blue_text_euro));
 					mainSlider.FindViewById<ImageView> (Resource.Id.countryImage).SetImageResource (Resource.Drawable.ic_country_blue);
@@ -269,9 +269,9 @@ namespace Euro2016Wallpapers
 //			motivationList.Add (new ImageModel () {
 //				version = Resource.Drawable.motivation_213, type = "local"
 //			});
-			listOfImages.Add ("newest", newestList);
+			listOfImages.Add ("best", newestList);
 			listOfImages.Add ("categories/players", playersList);
-			listOfImages.Add ("categories/country", countryList);			
+			listOfImages.Add ("categories/countries", countryList);			
 			listOfImages.Add ("categories/legends", legendsList);
 //			listOfImages.Add ("categories/couple", coupleList);
 //			listOfImages.Add ("categories/motivation", motivationList);
@@ -337,7 +337,7 @@ namespace Euro2016Wallpapers
 			images = new List<ImageModel> ();
 
 			switch (type) {
-			case "newest":
+			case "best":
 				{	
 					images = ConstructImageFromApp () [type];
 					break;
@@ -347,7 +347,7 @@ namespace Euro2016Wallpapers
 					images = ConstructImageFromApp () [type];
 					break;
 				}
-			case "categories/country":
+			case "categories/countries":
 				{
 					images = ConstructImageFromApp () [type];
 					break;
