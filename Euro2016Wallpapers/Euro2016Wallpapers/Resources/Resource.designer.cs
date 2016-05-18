@@ -2059,8 +2059,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060072
 			public const int DrawerLayout = 2131099762;
 			
-			// aapt resource value: 0x7f060093
-			public const int action0 = 2131099795;
+			// aapt resource value: 0x7f060095
+			public const int action0 = 2131099797;
 			
 			// aapt resource value: 0x7f06005a
 			public const int action_bar = 2131099738;
@@ -2086,8 +2086,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06005b
 			public const int action_context_bar = 2131099739;
 			
-			// aapt resource value: 0x7f060097
-			public const int action_divider = 2131099799;
+			// aapt resource value: 0x7f060099
+			public const int action_divider = 2131099801;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -2125,14 +2125,14 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060044
 			public const int buttonPanel = 2131099716;
 			
-			// aapt resource value: 0x7f060094
-			public const int cancel_action = 2131099796;
-			
-			// aapt resource value: 0x7f060086
-			public const int categoryItem = 2131099782;
+			// aapt resource value: 0x7f060096
+			public const int cancel_action = 2131099798;
 			
 			// aapt resource value: 0x7f060088
-			public const int category_slider = 2131099784;
+			public const int categoryItem = 2131099784;
+			
+			// aapt resource value: 0x7f06008a
+			public const int category_slider = 2131099786;
 			
 			// aapt resource value: 0x7f06002b
 			public const int center = 2131099691;
@@ -2149,8 +2149,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06007a
 			public const int chooseLayout = 2131099770;
 			
-			// aapt resource value: 0x7f06009a
-			public const int chronometer = 2131099802;
+			// aapt resource value: 0x7f06009c
+			public const int chronometer = 2131099804;
 			
 			// aapt resource value: 0x7f060033
 			public const int clip_horizontal = 2131099699;
@@ -2164,14 +2164,14 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06004a
 			public const int contentPanel = 2131099722;
 			
-			// aapt resource value: 0x7f06008d
-			public const int countryImage = 2131099789;
+			// aapt resource value: 0x7f06008f
+			public const int countryImage = 2131099791;
+			
+			// aapt resource value: 0x7f060090
+			public const int countryText = 2131099792;
 			
 			// aapt resource value: 0x7f06008e
-			public const int countryText = 2131099790;
-			
-			// aapt resource value: 0x7f06008c
-			public const int countrylayout = 2131099788;
+			public const int countrylayout = 2131099790;
 			
 			// aapt resource value: 0x7f060050
 			public const int custom = 2131099728;
@@ -2209,8 +2209,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06001c
 			public const int end = 2131099676;
 			
-			// aapt resource value: 0x7f06009f
-			public const int end_padder = 2131099807;
+			// aapt resource value: 0x7f0600a1
+			public const int end_padder = 2131099809;
 			
 			// aapt resource value: 0x7f060023
 			public const int enterAlways = 2131099683;
@@ -2248,8 +2248,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06000f
 			public const int homeAsUp = 2131099663;
 			
-			// aapt resource value: 0x7f0600a4
-			public const int homepage = 2131099812;
+			// aapt resource value: 0x7f0600a6
+			public const int homepage = 2131099814;
 			
 			// aapt resource value: 0x7f060042
 			public const int icon = 2131099714;
@@ -2263,14 +2263,14 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06003f
 			public const int image = 2131099711;
 			
-			// aapt resource value: 0x7f0600a0
-			public const int imageView = 2131099808;
-			
 			// aapt resource value: 0x7f0600a2
-			public const int image_recycler = 2131099810;
+			public const int imageView = 2131099810;
 			
-			// aapt resource value: 0x7f06009e
-			public const int info = 2131099806;
+			// aapt resource value: 0x7f0600a4
+			public const int image_recycler = 2131099812;
+			
+			// aapt resource value: 0x7f0600a0
+			public const int info = 2131099808;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -2278,23 +2278,23 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06002f
 			public const int left = 2131099695;
 			
-			// aapt resource value: 0x7f0600a6
-			public const int left_menu = 2131099814;
+			// aapt resource value: 0x7f0600a8
+			public const int left_menu = 2131099816;
 			
-			// aapt resource value: 0x7f060090
-			public const int legendsImage = 2131099792;
+			// aapt resource value: 0x7f060092
+			public const int legendsImage = 2131099794;
+			
+			// aapt resource value: 0x7f060093
+			public const int legendsText = 2131099795;
 			
 			// aapt resource value: 0x7f060091
-			public const int legendsText = 2131099793;
+			public const int legendslayout = 2131099793;
 			
-			// aapt resource value: 0x7f06008f
-			public const int legendslayout = 2131099791;
+			// aapt resource value: 0x7f06009a
+			public const int line1 = 2131099802;
 			
-			// aapt resource value: 0x7f060098
-			public const int line1 = 2131099800;
-			
-			// aapt resource value: 0x7f06009c
-			public const int line3 = 2131099804;
+			// aapt resource value: 0x7f06009e
+			public const int line3 = 2131099806;
 			
 			// aapt resource value: 0x7f06000b
 			public const int listMode = 2131099659;
@@ -2302,23 +2302,23 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
 			
-			// aapt resource value: 0x7f060082
-			public const int loading = 2131099778;
-			
 			// aapt resource value: 0x7f060084
-			public const int loading_retry = 2131099780;
+			public const int loading = 2131099780;
+			
+			// aapt resource value: 0x7f060086
+			public const int loading_retry = 2131099782;
 			
 			// aapt resource value: 0x7f060079
 			public const int main_loading = 2131099769;
 			
+			// aapt resource value: 0x7f0600a5
+			public const int main_loading_recycler = 2131099813;
+			
 			// aapt resource value: 0x7f0600a3
-			public const int main_loading_recycler = 2131099811;
+			public const int main_slider = 2131099811;
 			
-			// aapt resource value: 0x7f0600a1
-			public const int main_slider = 2131099809;
-			
-			// aapt resource value: 0x7f060096
-			public const int media_actions = 2131099798;
+			// aapt resource value: 0x7f060098
+			public const int media_actions = 2131099800;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
@@ -2335,8 +2335,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060016
 			public const int multiply = 2131099670;
 			
-			// aapt resource value: 0x7f0600a5
-			public const int nav_view = 2131099813;
+			// aapt resource value: 0x7f0600a7
+			public const int nav_view = 2131099815;
 			
 			// aapt resource value: 0x7f06006d
 			public const int navigation_header_container = 2131099757;
@@ -2344,8 +2344,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060021
 			public const int never = 2131099681;
 			
-			// aapt resource value: 0x7f060085
-			public const int newestItem = 2131099781;
+			// aapt resource value: 0x7f060087
+			public const int newestItem = 2131099783;
 			
 			// aapt resource value: 0x7f060010
 			public const int none = 2131099664;
@@ -2365,14 +2365,14 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060029
 			public const int pin = 2131099689;
 			
-			// aapt resource value: 0x7f06008a
-			public const int playersImage = 2131099786;
+			// aapt resource value: 0x7f06008c
+			public const int playersImage = 2131099788;
+			
+			// aapt resource value: 0x7f06008d
+			public const int playersText = 2131099789;
 			
 			// aapt resource value: 0x7f06008b
-			public const int playersText = 2131099787;
-			
-			// aapt resource value: 0x7f060089
-			public const int playerslayout = 2131099785;
+			public const int playerslayout = 2131099787;
 			
 			// aapt resource value: 0x7f060006
 			public const int progress_circular = 2131099654;
@@ -2383,8 +2383,14 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060054
 			public const int radio = 2131099732;
 			
-			// aapt resource value: 0x7f060087
-			public const int randomItem = 2131099783;
+			// aapt resource value: 0x7f060089
+			public const int randomItem = 2131099785;
+			
+			// aapt resource value: 0x7f060082
+			public const int resultsLayout = 2131099778;
+			
+			// aapt resource value: 0x7f060083
+			public const int resultsLayoutText = 2131099779;
 			
 			// aapt resource value: 0x7f060030
 			public const int right = 2131099696;
@@ -2467,8 +2473,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060045
 			public const int spacer = 2131099717;
 			
-			// aapt resource value: 0x7f060083
-			public const int splash_progressBar = 2131099779;
+			// aapt resource value: 0x7f060085
+			public const int splash_progressBar = 2131099781;
 			
 			// aapt resource value: 0x7f060008
 			public const int split_action_bar = 2131099656;
@@ -2485,8 +2491,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f060031
 			public const int start = 2131099697;
 			
-			// aapt resource value: 0x7f060095
-			public const int status_bar_latest_event_content = 2131099797;
+			// aapt resource value: 0x7f060097
+			public const int status_bar_latest_event_content = 2131099799;
 			
 			// aapt resource value: 0x7f060065
 			public const int submit_area = 2131099749;
@@ -2494,17 +2500,17 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06000d
 			public const int tabMode = 2131099661;
 			
-			// aapt resource value: 0x7f06009d
-			public const int text = 2131099805;
+			// aapt resource value: 0x7f06009f
+			public const int text = 2131099807;
 			
-			// aapt resource value: 0x7f06009b
-			public const int text2 = 2131099803;
+			// aapt resource value: 0x7f06009d
+			public const int text2 = 2131099805;
 			
 			// aapt resource value: 0x7f06004d
 			public const int textSpacerNoButtons = 2131099725;
 			
-			// aapt resource value: 0x7f060099
-			public const int time = 2131099801;
+			// aapt resource value: 0x7f06009b
+			public const int time = 2131099803;
 			
 			// aapt resource value: 0x7f060043
 			public const int title = 2131099715;
@@ -2548,8 +2554,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f06007d
 			public const int wallpapersText = 2131099773;
 			
-			// aapt resource value: 0x7f060092
-			public const int webview = 2131099794;
+			// aapt resource value: 0x7f060094
+			public const int webview = 2131099796;
 			
 			// aapt resource value: 0x7f060022
 			public const int withText = 2131099682;
@@ -2794,89 +2800,89 @@ namespace Euro2016Wallpapers
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090028
-			public const int CATEGORY = 2131296296;
-			
-			// aapt resource value: 0x7f090037
-			public const int ChoseColor = 2131296311;
+			// aapt resource value: 0x7f090029
+			public const int CATEGORY = 2131296297;
 			
 			// aapt resource value: 0x7f090038
-			public const int ChoseText = 2131296312;
-			
-			// aapt resource value: 0x7f090036
-			public const int ComingSoon = 2131296310;
-			
-			// aapt resource value: 0x7f090025
-			public const int Country = 2131296293;
-			
-			// aapt resource value: 0x7f090023
-			public const int Defaultbackground = 2131296291;
-			
-			// aapt resource value: 0x7f09001d
-			public const int English = 2131296285;
-			
-			// aapt resource value: 0x7f090032
-			public const int Failedtoload = 2131296306;
-			
-			// aapt resource value: 0x7f09001e
-			public const int German = 2131296286;
-			
-			// aapt resource value: 0x7f090026
-			public const int Legends = 2131296294;
-			
-			// aapt resource value: 0x7f090027
-			public const int NEWEST = 2131296295;
-			
-			// aapt resource value: 0x7f090033
-			public const int Okbutton = 2131296307;
-			
-			// aapt resource value: 0x7f090024
-			public const int Players = 2131296292;
-			
-			// aapt resource value: 0x7f090031
-			public const int Pleasechecksd = 2131296305;
-			
-			// aapt resource value: 0x7f090022
-			public const int Previewbackground = 2131296290;
-			
-			// aapt resource value: 0x7f090029
-			public const int RANDOM = 2131296297;
-			
-			// aapt resource value: 0x7f09001f
-			public const int Romanian = 2131296287;
-			
-			// aapt resource value: 0x7f090020
-			public const int Russian = 2131296288;
+			public const int ChoseColor = 2131296312;
 			
 			// aapt resource value: 0x7f090039
-			public const int Selectfontsize = 2131296313;
+			public const int ChoseText = 2131296313;
 			
-			// aapt resource value: 0x7f09003a
-			public const int Selectfonttype = 2131296314;
+			// aapt resource value: 0x7f090037
+			public const int ComingSoon = 2131296311;
 			
-			// aapt resource value: 0x7f090021
-			public const int Selectlanguage = 2131296289;
+			// aapt resource value: 0x7f090026
+			public const int Country = 2131296294;
 			
-			// aapt resource value: 0x7f09002c
-			public const int TryAgain = 2131296300;
+			// aapt resource value: 0x7f090024
+			public const int Defaultbackground = 2131296292;
 			
-			// aapt resource value: 0x7f09002b
-			public const int TryAgainLater = 2131296299;
+			// aapt resource value: 0x7f09001e
+			public const int English = 2131296286;
 			
-			// aapt resource value: 0x7f09002e
-			public const int ValidationCannotCast = 2131296302;
+			// aapt resource value: 0x7f090033
+			public const int Failedtoload = 2131296307;
+			
+			// aapt resource value: 0x7f09001f
+			public const int German = 2131296287;
+			
+			// aapt resource value: 0x7f090027
+			public const int Legends = 2131296295;
+			
+			// aapt resource value: 0x7f090028
+			public const int NEWEST = 2131296296;
+			
+			// aapt resource value: 0x7f090034
+			public const int Okbutton = 2131296308;
+			
+			// aapt resource value: 0x7f090025
+			public const int Players = 2131296293;
+			
+			// aapt resource value: 0x7f090032
+			public const int Pleasechecksd = 2131296306;
+			
+			// aapt resource value: 0x7f090023
+			public const int Previewbackground = 2131296291;
 			
 			// aapt resource value: 0x7f09002a
-			public const int ValidationErrorConverting = 2131296298;
+			public const int RANDOM = 2131296298;
 			
-			// aapt resource value: 0x7f09002f
-			public const int ValidationIntPtr = 2131296303;
+			// aapt resource value: 0x7f090020
+			public const int Romanian = 2131296288;
+			
+			// aapt resource value: 0x7f090021
+			public const int Russian = 2131296289;
+			
+			// aapt resource value: 0x7f09003a
+			public const int Selectfontsize = 2131296314;
+			
+			// aapt resource value: 0x7f09003b
+			public const int Selectfonttype = 2131296315;
+			
+			// aapt resource value: 0x7f090022
+			public const int Selectlanguage = 2131296290;
 			
 			// aapt resource value: 0x7f09002d
-			public const int ValidationRequestTimeOut = 2131296301;
+			public const int TryAgain = 2131296301;
+			
+			// aapt resource value: 0x7f09002c
+			public const int TryAgainLater = 2131296300;
+			
+			// aapt resource value: 0x7f09002f
+			public const int ValidationCannotCast = 2131296303;
+			
+			// aapt resource value: 0x7f09002b
+			public const int ValidationErrorConverting = 2131296299;
 			
 			// aapt resource value: 0x7f090030
-			public const int ValidationText = 2131296304;
+			public const int ValidationIntPtr = 2131296304;
+			
+			// aapt resource value: 0x7f09002e
+			public const int ValidationRequestTimeOut = 2131296302;
+			
+			// aapt resource value: 0x7f090031
+			public const int ValidationText = 2131296305;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_action_bar_home_description = 2131296256;
@@ -2944,8 +2950,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f090015
 			public const int bottom_sheet_behavior = 2131296277;
 			
-			// aapt resource value: 0x7f090035
-			public const int cancelbutton = 2131296309;
+			// aapt resource value: 0x7f090036
+			public const int cancelbutton = 2131296310;
 			
 			// aapt resource value: 0x7f090016
 			public const int character_counter_pattern = 2131296278;
@@ -2953,8 +2959,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f090019
 			public const int close_drawer = 2131296281;
 			
-			// aapt resource value: 0x7f090034
-			public const int donebutton = 2131296308;
+			// aapt resource value: 0x7f090035
+			public const int donebutton = 2131296309;
 			
 			// aapt resource value: 0x7f09001c
 			public const int morewallpapers = 2131296284;
@@ -2962,11 +2968,14 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f090018
 			public const int open_drawer = 2131296280;
 			
-			// aapt resource value: 0x7f09003b
-			public const int saveWallpapers = 2131296315;
-			
 			// aapt resource value: 0x7f09003c
-			public const int saveWallpapersMess = 2131296316;
+			public const int saveWallpapers = 2131296316;
+			
+			// aapt resource value: 0x7f09003d
+			public const int saveWallpapersMess = 2131296317;
+			
+			// aapt resource value: 0x7f09001d
+			public const int scheduleresults = 2131296285;
 			
 			// aapt resource value: 0x7f090013
 			public const int status_bar_notification_info_overflow = 2131296275;

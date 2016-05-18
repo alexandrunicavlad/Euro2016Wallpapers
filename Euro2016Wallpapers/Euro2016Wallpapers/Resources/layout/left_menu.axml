@@ -25,8 +25,7 @@
                 android:id="@+id/wallpapersLayout"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
-                android:gravity="center_vertical"
-                android:layout_marginTop="20dp">
+                android:gravity="center_vertical">
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -71,7 +70,8 @@
                 android:gravity="center"
                 android:id="@+id/morewallpapersLayout"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp">
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -84,6 +84,28 @@
                     android:textColor="@color/blue_text_euro"
                     android:layout_marginLeft="15dp"
                     android:text="@string/morewallpapers" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/resultsLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_more_wallpapers" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:id="@+id/resultsLayoutText"
+                    android:textColor="@color/blue_text_euro"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/scheduleresults" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

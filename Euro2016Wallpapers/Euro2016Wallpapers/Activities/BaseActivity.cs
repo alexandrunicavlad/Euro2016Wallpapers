@@ -61,6 +61,7 @@ namespace Euro2016Wallpapers
 			var wallpapers = leftMenu.FindViewById<LinearLayout> (Resource.Id.wallpapersLayout);
 			var tutorial = leftMenu.FindViewById<LinearLayout> (Resource.Id.tutorialLayout);
 			var morewallpapers = leftMenu.FindViewById<LinearLayout> (Resource.Id.morewallpapersLayout);
+			var results = leftMenu.FindViewById<LinearLayout> (Resource.Id.resultsLayout);
 			DatabaseServices = new DataBaseServices (this);
 
 			var drawerToggle = new ActionBarDrawerToggle (this, drawerLayout, toolbar, Resource.String.open_drawer, Resource.String.close_drawer);
@@ -100,7 +101,7 @@ namespace Euro2016Wallpapers
 			};
 
 			tutorial.Click += delegate {
-				CreateDisclaimerDialog ();
+				CreateDisclaimerDialog (GetString (Resource.String.tutorial));
 				//StartActivityForResult (typeof(LanguageActivity), 1);
 				drawerLayout.CloseDrawers ();
 			};
@@ -112,6 +113,11 @@ namespace Euro2016Wallpapers
 				} else {
 					StartActivity (typeof(MoreWallpapersActivity));
 				}
+			};
+
+			results.Click += delegate {
+				CreateDisclaimerDialog (GetString (Resource.String.scheduleresults));
+				drawerLayout.CloseDrawers ();
 			};
 		}
 
@@ -297,13 +303,13 @@ namespace Euro2016Wallpapers
 			});
 		}
 
-		protected void CreateDisclaimerDialog ()
+		protected void CreateDisclaimerDialog (string text)
 		{
 			var builder = new Android.App.AlertDialog.Builder (this);
 			builder.SetPositiveButton (GetString (Resource.String.Okbutton), delegate {				
 			});	
 			var dialog = builder.Create ();	
-			dialog.SetTitle (Resources.GetString (Resource.String.tutorial));
+			dialog.SetTitle (text);
 			dialog.SetMessage (GetString (Resource.String.ComingSoon));
 			dialog.Show ();
 		}

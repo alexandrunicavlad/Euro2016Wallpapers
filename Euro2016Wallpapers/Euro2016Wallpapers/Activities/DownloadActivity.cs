@@ -28,7 +28,6 @@ namespace Euro2016Wallpapers
 	public class DownloadActivity : ActionBarActivity
 	{
 		private Toolbar toolbar;
-		private Bitmap bitmap;
 		private ImageView imageView;
 		private Bundle extras;
 		private bool retry = false;
@@ -36,7 +35,6 @@ namespace Euro2016Wallpapers
 		private ImageView saveButton;
 		private byte[] byteArray;
 		private MemoryLimitedLruCache _memoryCache;
-		private Bitmap imageBitmap;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -59,6 +57,10 @@ namespace Euro2016Wallpapers
 				if (retry)
 					return;
 				saveButton.Clickable = false;
+				if (imageView.Drawable == null) {
+					saveButton.Clickable = true;
+					return;				
+				}
 				var bitm = ((BitmapDrawable)imageView.Drawable).Bitmap;
 				//imageView.DrawingCacheEnabled = true;
 				//Bitmap newbitmapnew = imageView.DrawingCache;
@@ -173,9 +175,6 @@ namespace Euro2016Wallpapers
 
 		}
 
-
-
-
 		private void SaveImage (Bitmap finalBitmap)
 		{					
 			File myDir = new File (Android.OS.Environment.GetExternalStoragePublicDirectory (Android.OS.Environment.DirectoryPictures), "Wallpapers");
@@ -222,7 +221,11 @@ namespace Euro2016Wallpapers
 				alert.SetPositiveButton (GetString (Resource.String.saveWallpapersMess), delegate {
 					DialogToSetWallpaper (byteArray);
 				});
+
 				var alertDialog = alert.Create ();
+				alertDialog.CancelEvent += (object sender, EventArgs e) => {
+					alertDialog.Show ();
+				};
 				alertDialog.SetTitle (Resources.GetString (Resource.String.saveWallpapers));
 				alertDialog.Show ();
 			});
