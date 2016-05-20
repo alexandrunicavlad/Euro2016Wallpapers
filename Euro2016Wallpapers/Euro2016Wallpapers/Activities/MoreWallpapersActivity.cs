@@ -27,14 +27,25 @@ namespace Euro2016Wallpapers
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.more_wallpapers_layout);
-			ConstructActionBar ();
+			var type = Intent.GetStringExtra ("type");
+			if (type.Equals (GetString (Resource.String.morewallpapers))) {					
+				ConstructActionBar (GetString (Resource.String.morewallpapers));
+				FillWebView (GetString (Resource.String.moreappurl));
+			} else if (type.Equals (GetString (Resource.String.scheduleresults))) {	
+				ConstructActionBar (GetString (Resource.String.scheduleresults));
+				FillWebView (GetString (Resource.String.resulturl));
+			}
+		}
+
+		private void FillWebView (string url)
+		{
 			web_view = FindViewById<WebView> (Resource.Id.webview);
 			web_view.Settings.JavaScriptEnabled = true;
 			web_view.SetWebViewClient (new MyWebViewClient ());
-			web_view.LoadUrl ("http://www.google.com");
+			web_view.LoadUrl (url);
 		}
 
-		private void ConstructActionBar ()
+		private void ConstructActionBar (string title)
 		{
 			toolbar = FindViewById<Toolbar> (Resource.Id.tool_bar);
 			SetSupportActionBar (toolbar);
@@ -46,9 +57,7 @@ namespace Euro2016Wallpapers
 			};
 
 			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Drawable.ic_back);
-			toolbar.FindViewById<TextView> (Resource.Id.titleName).Text = GetString (Resource.String.morewallpapers);
-
-
+			toolbar.FindViewById<TextView> (Resource.Id.titleName).Text = title;
 		}
 	}
 

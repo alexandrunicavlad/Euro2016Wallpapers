@@ -111,13 +111,21 @@ namespace Euro2016Wallpapers
 				if (this is MoreWallpapersActivity) {
 
 				} else {
-					StartActivity (typeof(MoreWallpapersActivity));
+					var intent = new Intent (this, typeof(MoreWallpapersActivity));
+					intent.PutExtra ("type", GetString (Resource.String.morewallpapers));
+					StartActivity (intent);
 				}
 			};
 
 			results.Click += delegate {
-				CreateDisclaimerDialog (GetString (Resource.String.scheduleresults));
 				drawerLayout.CloseDrawers ();
+				if (this is MoreWallpapersActivity) {
+
+				} else {
+					var intent = new Intent (this, typeof(MoreWallpapersActivity));
+					intent.PutExtra ("type", GetString (Resource.String.scheduleresults));
+					StartActivity (intent);
+				}
 			};
 		}
 

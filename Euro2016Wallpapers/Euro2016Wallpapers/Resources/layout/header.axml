@@ -4,11 +4,31 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="vertical">
-    <ImageView
-        android:layout_width="200dp"
-        android:src="@drawable/app_icon"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="30dp">
+        <ImageView
+            android:layout_width="150dp"
+            android:src="@drawable/app_icon"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EURO 2016"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:textColor="@color/blue_text_euro" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpapers"
+            android:textColor="@color/red_text"
+            android:textSize="12sp" />
+    </LinearLayout>
 </RelativeLayout>

@@ -6,6 +6,9 @@
 	<string name="tutorial">TUTORIAL</string>
 	<string name="morewallpapers">MORE WALLPAPERS</string>
 	<string name="scheduleresults">SCHEDULE &amp; RESULTS</string>
+	<!--url-->
+	<string name="resulturl">http://wallpaperapps.xyz/euro2016/results.html</string>
+	<string name="moreappurl">http://wallpaperapps.xyz/euro2016/moreapps.html</string>
 	<!--language-->
 	<string name="English">English</string>
 	<string name="German">German</string>

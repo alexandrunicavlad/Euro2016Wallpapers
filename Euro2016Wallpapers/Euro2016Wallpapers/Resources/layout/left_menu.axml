@@ -97,7 +97,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_more_wallpapers" />
+                    android:src="@drawable/ic_schedule" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

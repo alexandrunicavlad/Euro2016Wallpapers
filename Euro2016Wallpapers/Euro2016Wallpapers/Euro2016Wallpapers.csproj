@@ -272,6 +272,11 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_wallpapers.png" />
     <AndroidResource Include="Resources\layout\picture_layout.axml" />
     <AndroidResource Include="Resources\layout\more_wallpapers_layout.axml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_schedule.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

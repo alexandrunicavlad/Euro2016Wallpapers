@@ -2017,31 +2017,34 @@ namespace Euro2016Wallpapers
 			public const int ic_save = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_tutorial = 2130837598;
+			public const int ic_schedule = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_wallpapers = 2130837599;
+			public const int ic_tutorial = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int logo = 2130837600;
+			public const int ic_wallpapers = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int love_212 = 2130837601;
+			public const int logo = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int love_213 = 2130837602;
-			
-			// aapt resource value: 0x7f020066
-			public const int notification_template_icon_bg = 2130837606;
+			public const int love_212 = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int round_green_main = 2130837603;
+			public const int love_213 = 2130837603;
+			
+			// aapt resource value: 0x7f020067
+			public const int notification_template_icon_bg = 2130837607;
 			
 			// aapt resource value: 0x7f020064
-			public const int sport_212 = 2130837604;
+			public const int round_green_main = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int sport_213 = 2130837605;
+			public const int sport_212 = 2130837605;
+			
+			// aapt resource value: 0x7f020066
+			public const int sport_213 = 2130837606;
 			
 			static Drawable()
 			{
@@ -2800,89 +2803,89 @@ namespace Euro2016Wallpapers
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090029
-			public const int CATEGORY = 2131296297;
-			
-			// aapt resource value: 0x7f090038
-			public const int ChoseColor = 2131296312;
-			
-			// aapt resource value: 0x7f090039
-			public const int ChoseText = 2131296313;
-			
-			// aapt resource value: 0x7f090037
-			public const int ComingSoon = 2131296311;
-			
-			// aapt resource value: 0x7f090026
-			public const int Country = 2131296294;
-			
-			// aapt resource value: 0x7f090024
-			public const int Defaultbackground = 2131296292;
-			
-			// aapt resource value: 0x7f09001e
-			public const int English = 2131296286;
-			
-			// aapt resource value: 0x7f090033
-			public const int Failedtoload = 2131296307;
-			
-			// aapt resource value: 0x7f09001f
-			public const int German = 2131296287;
-			
-			// aapt resource value: 0x7f090027
-			public const int Legends = 2131296295;
-			
-			// aapt resource value: 0x7f090028
-			public const int NEWEST = 2131296296;
-			
-			// aapt resource value: 0x7f090034
-			public const int Okbutton = 2131296308;
-			
-			// aapt resource value: 0x7f090025
-			public const int Players = 2131296293;
-			
-			// aapt resource value: 0x7f090032
-			public const int Pleasechecksd = 2131296306;
-			
-			// aapt resource value: 0x7f090023
-			public const int Previewbackground = 2131296291;
-			
-			// aapt resource value: 0x7f09002a
-			public const int RANDOM = 2131296298;
-			
-			// aapt resource value: 0x7f090020
-			public const int Romanian = 2131296288;
-			
-			// aapt resource value: 0x7f090021
-			public const int Russian = 2131296289;
+			// aapt resource value: 0x7f09002b
+			public const int CATEGORY = 2131296299;
 			
 			// aapt resource value: 0x7f09003a
-			public const int Selectfontsize = 2131296314;
+			public const int ChoseColor = 2131296314;
 			
 			// aapt resource value: 0x7f09003b
-			public const int Selectfonttype = 2131296315;
+			public const int ChoseText = 2131296315;
 			
-			// aapt resource value: 0x7f090022
-			public const int Selectlanguage = 2131296290;
+			// aapt resource value: 0x7f090039
+			public const int ComingSoon = 2131296313;
 			
-			// aapt resource value: 0x7f09002d
-			public const int TryAgain = 2131296301;
+			// aapt resource value: 0x7f090028
+			public const int Country = 2131296296;
+			
+			// aapt resource value: 0x7f090026
+			public const int Defaultbackground = 2131296294;
+			
+			// aapt resource value: 0x7f090020
+			public const int English = 2131296288;
+			
+			// aapt resource value: 0x7f090035
+			public const int Failedtoload = 2131296309;
+			
+			// aapt resource value: 0x7f090021
+			public const int German = 2131296289;
+			
+			// aapt resource value: 0x7f090029
+			public const int Legends = 2131296297;
+			
+			// aapt resource value: 0x7f09002a
+			public const int NEWEST = 2131296298;
+			
+			// aapt resource value: 0x7f090036
+			public const int Okbutton = 2131296310;
+			
+			// aapt resource value: 0x7f090027
+			public const int Players = 2131296295;
+			
+			// aapt resource value: 0x7f090034
+			public const int Pleasechecksd = 2131296308;
+			
+			// aapt resource value: 0x7f090025
+			public const int Previewbackground = 2131296293;
 			
 			// aapt resource value: 0x7f09002c
-			public const int TryAgainLater = 2131296300;
+			public const int RANDOM = 2131296300;
+			
+			// aapt resource value: 0x7f090022
+			public const int Romanian = 2131296290;
+			
+			// aapt resource value: 0x7f090023
+			public const int Russian = 2131296291;
+			
+			// aapt resource value: 0x7f09003c
+			public const int Selectfontsize = 2131296316;
+			
+			// aapt resource value: 0x7f09003d
+			public const int Selectfonttype = 2131296317;
+			
+			// aapt resource value: 0x7f090024
+			public const int Selectlanguage = 2131296292;
 			
 			// aapt resource value: 0x7f09002f
-			public const int ValidationCannotCast = 2131296303;
-			
-			// aapt resource value: 0x7f09002b
-			public const int ValidationErrorConverting = 2131296299;
-			
-			// aapt resource value: 0x7f090030
-			public const int ValidationIntPtr = 2131296304;
+			public const int TryAgain = 2131296303;
 			
 			// aapt resource value: 0x7f09002e
-			public const int ValidationRequestTimeOut = 2131296302;
+			public const int TryAgainLater = 2131296302;
 			
 			// aapt resource value: 0x7f090031
-			public const int ValidationText = 2131296305;
+			public const int ValidationCannotCast = 2131296305;
+			
+			// aapt resource value: 0x7f09002d
+			public const int ValidationErrorConverting = 2131296301;
+			
+			// aapt resource value: 0x7f090032
+			public const int ValidationIntPtr = 2131296306;
+			
+			// aapt resource value: 0x7f090030
+			public const int ValidationRequestTimeOut = 2131296304;
+			
+			// aapt resource value: 0x7f090033
+			public const int ValidationText = 2131296307;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_action_bar_home_description = 2131296256;
@@ -2950,8 +2953,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f090015
 			public const int bottom_sheet_behavior = 2131296277;
 			
-			// aapt resource value: 0x7f090036
-			public const int cancelbutton = 2131296310;
+			// aapt resource value: 0x7f090038
+			public const int cancelbutton = 2131296312;
 			
 			// aapt resource value: 0x7f090016
 			public const int character_counter_pattern = 2131296278;
@@ -2959,8 +2962,11 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f090019
 			public const int close_drawer = 2131296281;
 			
-			// aapt resource value: 0x7f090035
-			public const int donebutton = 2131296309;
+			// aapt resource value: 0x7f090037
+			public const int donebutton = 2131296311;
+			
+			// aapt resource value: 0x7f09001f
+			public const int moreappurl = 2131296287;
 			
 			// aapt resource value: 0x7f09001c
 			public const int morewallpapers = 2131296284;
@@ -2968,11 +2974,14 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f090018
 			public const int open_drawer = 2131296280;
 			
-			// aapt resource value: 0x7f09003c
-			public const int saveWallpapers = 2131296316;
+			// aapt resource value: 0x7f09001e
+			public const int resulturl = 2131296286;
 			
-			// aapt resource value: 0x7f09003d
-			public const int saveWallpapersMess = 2131296317;
+			// aapt resource value: 0x7f09003e
+			public const int saveWallpapers = 2131296318;
+			
+			// aapt resource value: 0x7f09003f
+			public const int saveWallpapersMess = 2131296319;
 			
 			// aapt resource value: 0x7f09001d
 			public const int scheduleresults = 2131296285;
