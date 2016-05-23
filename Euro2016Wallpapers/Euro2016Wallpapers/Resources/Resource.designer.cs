@@ -2005,46 +2005,52 @@ namespace Euro2016Wallpapers
 			public const int ic_legends_blue = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int ic_more_wallpapers = 2130837594;
+			public const int ic_loading_progrss = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int ic_players = 2130837595;
+			public const int ic_more_wallpapers = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int ic_players_blue = 2130837596;
+			public const int ic_players = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_save = 2130837597;
+			public const int ic_players_blue = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_schedule = 2130837598;
+			public const int ic_save = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_tutorial = 2130837599;
+			public const int ic_schedule = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_wallpapers = 2130837600;
+			public const int ic_tutorial = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int logo = 2130837601;
+			public const int ic_wallpapers = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int love_212 = 2130837602;
+			public const int logo = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int love_213 = 2130837603;
-			
-			// aapt resource value: 0x7f020067
-			public const int notification_template_icon_bg = 2130837607;
+			public const int love_212 = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int round_green_main = 2130837604;
+			public const int love_213 = 2130837604;
+			
+			// aapt resource value: 0x7f020069
+			public const int notification_template_icon_bg = 2130837609;
 			
 			// aapt resource value: 0x7f020065
-			public const int sport_212 = 2130837605;
+			public const int progress_animation = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int sport_213 = 2130837606;
+			public const int round_green_main = 2130837606;
+			
+			// aapt resource value: 0x7f020067
+			public const int sport_212 = 2130837607;
+			
+			// aapt resource value: 0x7f020068
+			public const int sport_213 = 2130837608;
 			
 			static Drawable()
 			{

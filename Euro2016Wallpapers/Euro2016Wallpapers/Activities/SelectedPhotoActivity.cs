@@ -335,30 +335,30 @@ namespace Euro2016Wallpapers
 		private void GetData (string type)
 		{			
 			images = new List<ImageModel> ();
-
-			switch (type) {
-			case "best":
-				{	
-					images = ConstructImageFromApp () [type];
-					break;
-				}
-			case "categories/players":
-				{
-					images = ConstructImageFromApp () [type];
-					break;
-				}
-			case "categories/countries":
-				{
-					images = ConstructImageFromApp () [type];
-					break;
-				}
-			case "categories/legends":
-				{
-					images = ConstructImageFromApp () [type];
-					break;
-				}
-
-			}
+//
+//			switch (type) {
+//			case "best":
+//				{	
+//					images = ConstructImageFromApp () [type];
+//					break;
+//				}
+//			case "categories/players":
+//				{
+//					images = ConstructImageFromApp () [type];
+//					break;
+//				}
+//			case "categories/countries":
+//				{
+//					images = ConstructImageFromApp () [type];
+//					break;
+//				}
+//			case "categories/legends":
+//				{
+//					images = ConstructImageFromApp () [type];
+//					break;
+//				}
+//
+//			}
 
 			var reqUrl = string.Format ("{0}{1}/&max_results=500", requestURL, type);
 			var request = (HttpWebRequest)WebRequest.Create (reqUrl);
@@ -382,12 +382,11 @@ namespace Euro2016Wallpapers
 			}
 			RunOnUiThread (() => {
 				
-				if (retrying) {
-					
+//				if (retrying) {					
 //					ShowRetry (loading, this);
 //					loading.Visibility = ViewStates.Visible;
 //					return;
-				}
+				//	}
 				ThreadPool.QueueUserWorkItem (o => DownloadImage ());
 			});
 		}

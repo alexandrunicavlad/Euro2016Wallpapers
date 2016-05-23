@@ -277,6 +277,8 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_schedule.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_schedule.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable\progress_animation.xml" />
+    <AndroidResource Include="Resources\drawable\ic_loading_progrss.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
