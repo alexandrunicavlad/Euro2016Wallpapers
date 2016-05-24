@@ -45,9 +45,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/image_recycler"
-            android:layout_margin="5dp"
+            android:padding="2.5dp"
+            android:adjustViewBounds="true"
             android:background="@color/white"
             android:visibility="visible" />
+    <!--        <GridView
+            android:id="@+id/image_recycler"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:numColumns="3"
+            android:gravity="center" />-->
         <include
             android:id="@+id/main_loading_recycler"
             android:visibility="gone"

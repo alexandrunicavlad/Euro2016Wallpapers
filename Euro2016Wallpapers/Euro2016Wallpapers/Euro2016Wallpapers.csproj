@@ -37,6 +37,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -207,14 +208,8 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_save.png" />
     <AndroidResource Include="Resources\drawable\bar_round_gray.xml" />
     <AndroidResource Include="Resources\drawable\button_round_green.xml" />
-    <AndroidResource Include="Resources\drawable\happiness_212.jpg" />
-    <AndroidResource Include="Resources\drawable\happiness_213.jpg" />
     <AndroidResource Include="Resources\drawable\logo.png" />
-    <AndroidResource Include="Resources\drawable\love_212.jpg" />
-    <AndroidResource Include="Resources\drawable\love_213.jpg" />
     <AndroidResource Include="Resources\drawable\round_green_main.xml" />
-    <AndroidResource Include="Resources\drawable\sport_212.jpg" />
-    <AndroidResource Include="Resources\drawable\sport_213.jpg" />
     <AndroidResource Include="Resources\layout\download_layout.axml" />
     <AndroidResource Include="Resources\layout\header.axml" />
     <AndroidResource Include="Resources\layout\left_menu.axml" />
@@ -279,6 +274,31 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_schedule.png" />
     <AndroidResource Include="Resources\drawable\progress_animation.xml" />
     <AndroidResource Include="Resources\drawable\ic_loading_progrss.png" />
+    <AndroidResource Include="Resources\drawable\england.png" />
+    <AndroidResource Include="Resources\drawable\france.png" />
+    <AndroidResource Include="Resources\drawable\germany.png" />
+    <AndroidResource Include="Resources\drawable\italy.png" />
+    <AndroidResource Include="Resources\drawable\romania.png" />
+    <AndroidResource Include="Resources\drawable\spain.png" />
+    <AndroidResource Include="Resources\drawable\germany1.png" />
+    <AndroidResource Include="Resources\drawable\germany5.png" />
+    <AndroidResource Include="Resources\drawable\screen2.png" />
+    <AndroidResource Include="Resources\drawable\screen6.png" />
+    <AndroidResource Include="Resources\drawable\spain2.png" />
+    <AndroidResource Include="Resources\drawable\CristianoRonaldo.png" />
+    <AndroidResource Include="Resources\drawable\italia6.png" />
+    <AndroidResource Include="Resources\drawable\JamesMcCarthy.png" />
+    <AndroidResource Include="Resources\drawable\JonathanWalters.png" />
+    <AndroidResource Include="Resources\drawable\KamilGlik.png" />
+    <AndroidResource Include="Resources\drawable\RaheemSterling.png" />
+    <AndroidResource Include="Resources\drawable\ZlatanIbrahimovic.png" />
+    <AndroidResource Include="Resources\drawable\cannavaro_legend.png" />
+    <AndroidResource Include="Resources\drawable\davidbeckham_legend.png" />
+    <AndroidResource Include="Resources\drawable\gicahagi_legend.png" />
+    <AndroidResource Include="Resources\drawable\kahn_legend.png" />
+    <AndroidResource Include="Resources\drawable\luisfigo_legend.png" />
+    <AndroidResource Include="Resources\drawable\maldini_legend.png" />
+    <AndroidResource Include="Resources\drawable\MichelPlatini_legend.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

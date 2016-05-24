@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Euro2016Wallpapers
 {
-	[Activity (MainLauncher = true, Label = "@string/app_name", Theme = "@style/AppTheme", ConfigurationChanges =
+	[Activity (MainLauncher = true, Label = "@string/app_screen", Theme = "@style/AppTheme", ConfigurationChanges =
 		(Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize))]		
 
 
@@ -118,6 +118,7 @@ namespace Euro2016Wallpapers
 				}
 				loadingData = true;
 				if (newestBool) {
+					loadingData = false;
 					return;
 				} else {				
 					recyclerView.Visibility = ViewStates.Gone;
@@ -136,6 +137,7 @@ namespace Euro2016Wallpapers
 				}
 				loadingData = true;
 				if (categoryBool) {
+					loadingData = false;
 					return;
 				} else {			
 					recyclerView.Visibility = ViewStates.Gone;
@@ -160,6 +162,7 @@ namespace Euro2016Wallpapers
 				}
 				loadingData = true;
 				if (randomBool) {
+					loadingData = false;
 					return;
 				} else {	
 					recyclerView.Visibility = ViewStates.Gone;
@@ -234,28 +237,107 @@ namespace Euro2016Wallpapers
 //			var coupleList = new List<ImageModel> ();
 //			var motivationList = new List<ImageModel> ();
 			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.sport_213, type = "local"
+				version = Resource.Drawable.CristianoRonaldo, type = "local"
 			});
 			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.happiness_212, type = "local"
+				version = Resource.Drawable.JonathanWalters, type = "local"
+			});
+			newestList.Add (new ImageModel () {
+				version = Resource.Drawable.ZlatanIbrahimovic, type = "local"
+			});
+			newestList.Add (new ImageModel () {
+				version = Resource.Drawable.screen6, type = "local"
+			});
+			newestList.Add (new ImageModel () {
+				version = Resource.Drawable.MichelPlatini_legend, type = "local"
+			});
+			newestList.Add (new ImageModel () {
+				version = Resource.Drawable.italia6, type = "local"
+			});
+			newestList.Add (new ImageModel () {
+				version = Resource.Drawable.gicahagi_legend, type = "local"
+			});
+			newestList.Add (new ImageModel () {
+				version = Resource.Drawable.germany1, type = "local"
+			});
+
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.CristianoRonaldo, type = "local"
 			});
 			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.love_212, type = "local"
+				version = Resource.Drawable.germany1, type = "local"
 			});
 			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.love_213, type = "local"
+				version = Resource.Drawable.germany5, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.italia6, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.JamesMcCarthy, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.JonathanWalters, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.KamilGlik, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.RaheemSterling, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.spain2, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.screen2, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.screen6, type = "local"
+			});
+			playersList.Add (new ImageModel () {
+				version = Resource.Drawable.ZlatanIbrahimovic, type = "local"
+			});
+
+
+			countryList.Add (new ImageModel () {
+				version = Resource.Drawable.england, type = "local"
 			});
 			countryList.Add (new ImageModel () {
-				version = Resource.Drawable.happiness_212, type = "local"
+				version = Resource.Drawable.france, type = "local"
 			});
 			countryList.Add (new ImageModel () {
-				version = Resource.Drawable.happiness_213, type = "local"
+				version = Resource.Drawable.germany, type = "local"
+			});
+			countryList.Add (new ImageModel () {
+				version = Resource.Drawable.italy, type = "local"
+			});
+			countryList.Add (new ImageModel () {
+				version = Resource.Drawable.romania, type = "local"
+			});
+			countryList.Add (new ImageModel () {
+				version = Resource.Drawable.spain, type = "local"
+			});
+
+			legendsList.Add (new ImageModel () {
+				version = Resource.Drawable.cannavaro_legend, type = "local"
 			});
 			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.sport_212, type = "local"
+				version = Resource.Drawable.davidbeckham_legend, type = "local"
 			});
 			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.sport_213, type = "local"
+				version = Resource.Drawable.gicahagi_legend, type = "local"
+			});
+			legendsList.Add (new ImageModel () {
+				version = Resource.Drawable.kahn_legend, type = "local"
+			});
+			legendsList.Add (new ImageModel () {
+				version = Resource.Drawable.luisfigo_legend, type = "local"
+			});
+			legendsList.Add (new ImageModel () {
+				version = Resource.Drawable.maldini_legend, type = "local"
+			});
+			legendsList.Add (new ImageModel () {
+				version = Resource.Drawable.MichelPlatini_legend, type = "local"
 			});
 //			coupleList.Add (new ImageModel () {
 //				version = Resource.Drawable.couple_212, type = "local"
@@ -335,30 +417,6 @@ namespace Euro2016Wallpapers
 		private void GetData (string type)
 		{			
 			images = new List<ImageModel> ();
-//
-//			switch (type) {
-//			case "best":
-//				{	
-//					images = ConstructImageFromApp () [type];
-//					break;
-//				}
-//			case "categories/players":
-//				{
-//					images = ConstructImageFromApp () [type];
-//					break;
-//				}
-//			case "categories/countries":
-//				{
-//					images = ConstructImageFromApp () [type];
-//					break;
-//				}
-//			case "categories/legends":
-//				{
-//					images = ConstructImageFromApp () [type];
-//					break;
-//				}
-//
-//			}
 
 			var reqUrl = string.Format ("{0}{1}/&max_results=500", requestURL, type);
 			var request = (HttpWebRequest)WebRequest.Create (reqUrl);
@@ -374,11 +432,12 @@ namespace Euro2016Wallpapers
 				var reader = new StreamReader (response.GetResponseStream ());
 				var streamText = reader.ReadToEnd ();
 				var deserializedStreamText = JsonConvert.DeserializeObject<Images> (streamText);
-				images.AddRange (deserializedStreamText.resources);
-
+				//images.AddRange (deserializedStreamText.resources);
+				images = deserializedStreamText.resources;
 			} catch (Exception ex) {
 				HandleErrors (ex);
 				retrying = true;
+				images = LocalImage (type);
 			}
 			RunOnUiThread (() => {
 				
@@ -389,6 +448,33 @@ namespace Euro2016Wallpapers
 				//	}
 				ThreadPool.QueueUserWorkItem (o => DownloadImage ());
 			});
+		}
+
+		private List<ImageModel> LocalImage (string type)
+		{
+			switch (type) {
+			case "best":
+				{	
+					images = ConstructImageFromApp () [type];
+					break;
+				}
+			case "categories/players":
+				{
+					images = ConstructImageFromApp () [type];
+					break;
+				}
+			case "categories/countries":
+				{
+					images = ConstructImageFromApp () [type];
+					break;
+				}
+			case "categories/legends":
+				{
+					images = ConstructImageFromApp () [type];
+					break;
+				}
+			}
+			return images;
 		}
 
 		private void DownloadImage ()
@@ -435,6 +521,7 @@ namespace Euro2016Wallpapers
 				FindViewById<LinearLayout> (Resource.Id.selectedpagelayout).Visibility = ViewStates.Visible;
 				free = Java.Lang.Runtime.GetRuntime ().FreeMemory ();
 				adapter = new ImageAdapter (this, images);
+
 				free = Java.Lang.Runtime.GetRuntime ().FreeMemory ();
 				adapter.ItemClick += OnItemClick;
 				recyclerView.SetAdapter (adapter);

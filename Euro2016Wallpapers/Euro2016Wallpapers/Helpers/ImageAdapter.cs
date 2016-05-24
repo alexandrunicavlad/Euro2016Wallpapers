@@ -37,6 +37,7 @@ namespace Euro2016Wallpapers
 			}
 		}
 
+
 		public override void 
 		OnBindViewHolder (RecyclerView.ViewHolder holder, int position)
 		{
@@ -57,8 +58,8 @@ namespace Euro2016Wallpapers
 				var afterUrl = item.url.Substring (positionChar + 7);
 				var heught = 170 * context.Resources.DisplayMetrics.Density;
 				vh.Image.SetScaleType (ImageView.ScaleType.CenterInside);
-				var newUrl = string.Format ("{0}w_{1},h_{2},c_fill/{3}", subUrl, context.Resources.DisplayMetrics.WidthPixels / 3, heught, afterUrl);
-				Picasso.With (context).Load (newUrl).Placeholder (Resource.Drawable.progress_animation)	
+				var newUrl = string.Format ("{0}w_{1},h_{2}/{3}", subUrl, context.Resources.DisplayMetrics.WidthPixels / 6, heught / 2, afterUrl);
+				Picasso.With (context).Load (newUrl).Placeholder (Resource.Drawable.progress_animation).Fit ()
 					.Into (vh.Image, delegate {							
 					var b =	System.GC.GetTotalMemory (true);
 				}, delegate {
