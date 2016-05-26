@@ -96,6 +96,7 @@
     <Compile Include="Services\DataBaseServices.cs" />
     <Compile Include="Services\IDataBaseServices.cs" />
     <Compile Include="Activities\MoreWallpapersActivity.cs" />
+    <Compile Include="Activities\TutorialActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -299,6 +300,14 @@
     <AndroidResource Include="Resources\drawable\luisfigo_legend.png" />
     <AndroidResource Include="Resources\drawable\maldini_legend.png" />
     <AndroidResource Include="Resources\drawable\MichelPlatini_legend.png" />
+    <AndroidResource Include="Resources\drawable\Screenshot1.jpg" />
+    <AndroidResource Include="Resources\drawable\Screenshot2.jpg" />
+    <AndroidResource Include="Resources\drawable\Screenshot3.jpg" />
+    <AndroidResource Include="Resources\drawable\Screenshot4.jpg" />
+    <AndroidResource Include="Resources\drawable\Screenshot5.jpg" />
+    <AndroidResource Include="Resources\drawable\Screenshot6.jpg" />
+    <AndroidResource Include="Resources\drawable\Screenshot7.jpg" />
+    <AndroidResource Include="Resources\layout\tutorial_layout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

@@ -101,9 +101,12 @@ namespace Euro2016Wallpapers
 			};
 
 			tutorial.Click += delegate {
-				CreateDisclaimerDialog (GetString (Resource.String.tutorial));
-				//StartActivityForResult (typeof(LanguageActivity), 1);
 				drawerLayout.CloseDrawers ();
+				if (this is TutorialActivity) {
+
+				} else {
+					StartActivity (typeof(TutorialActivity));
+				}
 			};
 
 			morewallpapers.Click += delegate {

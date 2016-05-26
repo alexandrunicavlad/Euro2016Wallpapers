@@ -2079,8 +2079,8 @@ namespace Euro2016Wallpapers
 			// aapt resource value: 0x7f020072
 			public const int MichelPlatini_legend = 2130837618;
 			
-			// aapt resource value: 0x7f02007c
-			public const int notification_template_icon_bg = 2130837628;
+			// aapt resource value: 0x7f020083
+			public const int notification_template_icon_bg = 2130837635;
 			
 			// aapt resource value: 0x7f020073
 			public const int progress_animation = 2130837619;
@@ -2101,13 +2101,34 @@ namespace Euro2016Wallpapers
 			public const int screen6 = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int spain = 2130837625;
+			public const int Screenshot1 = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int spain2 = 2130837626;
+			public const int Screenshot2 = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ZlatanIbrahimovic = 2130837627;
+			public const int Screenshot3 = 2130837627;
+			
+			// aapt resource value: 0x7f02007c
+			public const int Screenshot4 = 2130837628;
+			
+			// aapt resource value: 0x7f02007d
+			public const int Screenshot5 = 2130837629;
+			
+			// aapt resource value: 0x7f02007e
+			public const int Screenshot6 = 2130837630;
+			
+			// aapt resource value: 0x7f02007f
+			public const int Screenshot7 = 2130837631;
+			
+			// aapt resource value: 0x7f020080
+			public const int spain = 2130837632;
+			
+			// aapt resource value: 0x7f020081
+			public const int spain2 = 2130837633;
+			
+			// aapt resource value: 0x7f020082
+			public const int ZlatanIbrahimovic = 2130837634;
 			
 			static Drawable()
 			{
@@ -2852,6 +2873,9 @@ namespace Euro2016Wallpapers
 			
 			// aapt resource value: 0x7f03003a
 			public const int tool_bar = 2130903098;
+			
+			// aapt resource value: 0x7f03003b
+			public const int tutorial_layout = 2130903099;
 			
 			static Layout()
 			{

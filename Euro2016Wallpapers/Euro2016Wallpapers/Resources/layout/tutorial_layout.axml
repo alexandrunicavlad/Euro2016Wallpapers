@@ -38,11 +38,50 @@
                     android:id="@+id/iconRight" />
             </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
-        <WebView
-            android:id="@+id/webview"
-            android:layout_below="@+id/appbar"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:src="@drawable/screenshot1" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:src="@drawable/screenshot2" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/screenshot3"
+                    android:padding="15dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/screenshot4"
+                    android:padding="15dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/screenshot5"
+                    android:padding="15dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/screenshot6"
+                    android:padding="15dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/screenshot7"
+                    android:padding="15dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>
         <include
             android:id="@+id/main_loading"
             android:visibility="gone"
