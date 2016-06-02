@@ -102,11 +102,12 @@ namespace Euro2016Wallpapers
 
 			tutorial.Click += delegate {
 				drawerLayout.CloseDrawers ();
-				if (this is TutorialActivity) {
-
-				} else {
-					StartActivity (typeof(TutorialActivity));
-				}
+				CreateDisclaimerDialog ("Comming Soon");
+//				if (this is TutorialActivity) {
+//
+//				} else {
+//					StartActivity (typeof(TutorialActivity));
+//				}
 			};
 
 			morewallpapers.Click += delegate {

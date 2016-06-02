@@ -236,68 +236,6 @@ namespace Euro2016Wallpapers
 			var legendsList = new List<ImageModel> ();
 //			var coupleList = new List<ImageModel> ();
 //			var motivationList = new List<ImageModel> ();
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.CristianoRonaldo, type = "local"
-			});
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.JonathanWalters, type = "local"
-			});
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.ZlatanIbrahimovic, type = "local"
-			});
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.screen6, type = "local"
-			});
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.MichelPlatini_legend, type = "local"
-			});
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.italia6, type = "local"
-			});
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.gicahagi_legend, type = "local"
-			});
-			newestList.Add (new ImageModel () {
-				version = Resource.Drawable.germany1, type = "local"
-			});
-
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.CristianoRonaldo, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.germany1, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.germany5, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.italia6, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.JamesMcCarthy, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.JonathanWalters, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.KamilGlik, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.RaheemSterling, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.spain2, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.screen2, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.screen6, type = "local"
-			});
-			playersList.Add (new ImageModel () {
-				version = Resource.Drawable.ZlatanIbrahimovic, type = "local"
-			});
-
 
 			countryList.Add (new ImageModel () {
 				version = Resource.Drawable.england, type = "local"
@@ -316,28 +254,6 @@ namespace Euro2016Wallpapers
 			});
 			countryList.Add (new ImageModel () {
 				version = Resource.Drawable.spain, type = "local"
-			});
-
-			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.cannavaro_legend, type = "local"
-			});
-			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.davidbeckham_legend, type = "local"
-			});
-			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.gicahagi_legend, type = "local"
-			});
-			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.kahn_legend, type = "local"
-			});
-			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.luisfigo_legend, type = "local"
-			});
-			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.maldini_legend, type = "local"
-			});
-			legendsList.Add (new ImageModel () {
-				version = Resource.Drawable.MichelPlatini_legend, type = "local"
 			});
 //			coupleList.Add (new ImageModel () {
 //				version = Resource.Drawable.couple_212, type = "local"
